@@ -1,0 +1,14 @@
+[{
+  "dateTime": "2022-11-10T10:48:32.484453",
+  "trayecto": {
+    "duration": "PT45M",
+    "costo": 100,
+    "origen": "Manizales",
+    "destino": "Medellín"
+  },
+  "cancelado": false,
+  "avion": {
+    "matricula": "MR4167",
+    "modelo": "Avianca 03"
+  }
+}]

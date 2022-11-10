@@ -1,0 +1,76 @@
+[
+  {
+    "checkIn": false,
+    "reserva": {
+      "pasajero": {
+        "apellidos": "Hurtado ",
+        "identificacion": "P001",
+        "nombres": "Marco Antonio"
+      },
+      "cancelada": false,
+      "fechaHora": "2022-10-09T22:35:46.237107"
+    },
+    "vuelo": {
+      "dateTime": "2022-10-09T22:35:27.845306",
+      "trayecto": {
+        "duration": "PT45M",
+        "costo": 100,
+        "origen": "Manizales",
+        "destino": "Medellín"
+      },
+      "cancelado": false,
+      "avion": {
+        "matricula": "MR4167",
+        "modelo": "Avianca 03"
+      }
+    },
+    "silla": {
+      "posicion": "03D",
+      "columna": "D",
+      "ubicacion": "PASILLO",
+      "fila": 3,
+      "avion": {
+        "matricula": "MR4167",
+        "modelo": "Avianca 03"
+      },
+      "disponible": true
+    }
+  },
+  {
+    "checkIn": false,
+    "reserva": {
+      "pasajero": {
+        "apellidos": "Mabesoy",
+        "identificacion": "P004",
+        "nombres": "Marcela"
+      },
+      "cancelada": false,
+      "fechaHora": "2022-10-09T22:36:15.636181"
+    },
+    "vuelo": {
+      "dateTime": "2022-10-09T22:35:27.845306",
+      "trayecto": {
+        "duration": "PT45M",
+        "costo": 100,
+        "origen": "Manizales",
+        "destino": "Medellín"
+      },
+      "cancelado": false,
+      "avion": {
+        "matricula": "MR4167",
+        "modelo": "Avianca 03"
+      }
+    },
+    "silla": {
+      "posicion": "05A",
+      "columna": "A",
+      "ubicacion": "VENTANA",
+      "fila": 5,
+      "avion": {
+        "matricula": "MR4167",
+        "modelo": "Avianca 03"
+      },
+      "disponible": true
+    }
+  }
+]

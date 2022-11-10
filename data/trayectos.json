@@ -1,0 +1,14 @@
+[
+  {
+    "duration": "PT1H",
+    "costo": 100,
+    "origen": "Medellín",
+    "destino": "Manizales"
+  },
+  {
+    "duration": "PT40M",
+    "costo": 200,
+    "origen": "Cali",
+    "destino": "Medellín"
+  }
+]

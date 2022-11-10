@@ -1,0 +1,790 @@
+[
+  {
+    "posicion": "01A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 1,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "01B",
+    "columna": "B",
+    "ubicacion": "PASILLO",
+    "fila": 1,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "01C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 1,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "01D",
+    "columna": "D",
+    "ubicacion": "VENTANA",
+    "fila": 1,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "02A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 2,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "02B",
+    "columna": "B",
+    "ubicacion": "PASILLO",
+    "fila": 2,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "02C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 2,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "02D",
+    "columna": "D",
+    "ubicacion": "VENTANA",
+    "fila": 2,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "03A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 3,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "03B",
+    "columna": "B",
+    "ubicacion": "CENTRO",
+    "fila": 3,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "03C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 3,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "03D",
+    "columna": "D",
+    "ubicacion": "PASILLO",
+    "fila": 3,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "03E",
+    "columna": "E",
+    "ubicacion": "CENTRO",
+    "fila": 3,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "03F",
+    "columna": "F",
+    "ubicacion": "VENTANA",
+    "fila": 3,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "04A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 4,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "04B",
+    "columna": "B",
+    "ubicacion": "CENTRO",
+    "fila": 4,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "04C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 4,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "04D",
+    "columna": "D",
+    "ubicacion": "PASILLO",
+    "fila": 4,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "04E",
+    "columna": "E",
+    "ubicacion": "CENTRO",
+    "fila": 4,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "04F",
+    "columna": "F",
+    "ubicacion": "VENTANA",
+    "fila": 4,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "05A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 5,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "05B",
+    "columna": "B",
+    "ubicacion": "CENTRO",
+    "fila": 5,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "05C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 5,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "05D",
+    "columna": "D",
+    "ubicacion": "PASILLO",
+    "fila": 5,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "05E",
+    "columna": "E",
+    "ubicacion": "CENTRO",
+    "fila": 5,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "05F",
+    "columna": "F",
+    "ubicacion": "VENTANA",
+    "fila": 5,
+    "avion": {
+      "matricula": "MR4167",
+      "modelo": "Avianca 03"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "01A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 1,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "01B",
+    "columna": "B",
+    "ubicacion": "PASILLO",
+    "fila": 1,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "01C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 1,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "01D",
+    "columna": "D",
+    "ubicacion": "VENTANA",
+    "fila": 1,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "02A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 2,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "02B",
+    "columna": "B",
+    "ubicacion": "PASILLO",
+    "fila": 2,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "02C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 2,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "02D",
+    "columna": "D",
+    "ubicacion": "VENTANA",
+    "fila": 2,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "03A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 3,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "03B",
+    "columna": "B",
+    "ubicacion": "PASILLO",
+    "fila": 3,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "03C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 3,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "03D",
+    "columna": "D",
+    "ubicacion": "VENTANA",
+    "fila": 3,
+    "licor": "NINGUNO",
+    "menu": "INDEFINIDO",
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "04A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 4,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "04B",
+    "columna": "B",
+    "ubicacion": "CENTRO",
+    "fila": 4,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "04C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 4,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "04D",
+    "columna": "D",
+    "ubicacion": "PASILLO",
+    "fila": 4,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "04E",
+    "columna": "E",
+    "ubicacion": "CENTRO",
+    "fila": 4,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "04F",
+    "columna": "F",
+    "ubicacion": "VENTANA",
+    "fila": 4,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "05A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 5,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "05B",
+    "columna": "B",
+    "ubicacion": "CENTRO",
+    "fila": 5,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "05C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 5,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "05D",
+    "columna": "D",
+    "ubicacion": "PASILLO",
+    "fila": 5,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "05E",
+    "columna": "E",
+    "ubicacion": "CENTRO",
+    "fila": 5,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "05F",
+    "columna": "F",
+    "ubicacion": "VENTANA",
+    "fila": 5,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "06A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 6,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "06B",
+    "columna": "B",
+    "ubicacion": "CENTRO",
+    "fila": 6,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "06C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 6,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "06D",
+    "columna": "D",
+    "ubicacion": "PASILLO",
+    "fila": 6,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "06E",
+    "columna": "E",
+    "ubicacion": "CENTRO",
+    "fila": 6,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "06F",
+    "columna": "F",
+    "ubicacion": "VENTANA",
+    "fila": 6,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "07A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 7,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "07B",
+    "columna": "B",
+    "ubicacion": "CENTRO",
+    "fila": 7,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "07C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 7,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "07D",
+    "columna": "D",
+    "ubicacion": "PASILLO",
+    "fila": 7,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "07E",
+    "columna": "E",
+    "ubicacion": "CENTRO",
+    "fila": 7,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "07F",
+    "columna": "F",
+    "ubicacion": "VENTANA",
+    "fila": 7,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "08A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 8,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "08B",
+    "columna": "B",
+    "ubicacion": "CENTRO",
+    "fila": 8,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "08C",
+    "columna": "C",
+    "ubicacion": "PASILLO",
+    "fila": 8,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "08D",
+    "columna": "D",
+    "ubicacion": "PASILLO",
+    "fila": 8,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "08E",
+    "columna": "E",
+    "ubicacion": "CENTRO",
+    "fila": 8,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  },
+  {
+    "posicion": "08F",
+    "columna": "F",
+    "ubicacion": "VENTANA",
+    "fila": 8,
+    "avion": {
+      "matricula": "RS-456",
+      "modelo": "BAD-BUNNY-49"
+    },
+    "disponible": true
+  }
+]

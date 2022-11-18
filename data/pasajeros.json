@@ -1,22 +1,32 @@
 [
   {
-    "apellidos": "Hurtado ",
+    "apellidos": "Mabesoy Torres",
     "identificacion": "P001",
-    "nombres": "Marco Antonio"
+    "nombres": "Ana Maria"
   },
   {
-    "apellidos": "Llanos",
+    "apellidos": "Zuñiga Morelo",
     "identificacion": "P002",
-    "nombres": "Diego"
+    "nombres": "Dennis Rosa"
   },
   {
-    "apellidos": "Llanos",
+    "apellidos": "Ciceros Cardona",
     "identificacion": "P003",
-    "nombres": "Ana"
+    "nombres": "Camilo Andres"
   },
   {
-    "apellidos": "Mabesoy",
+    "apellidos": "Salazar Cordoba",
     "identificacion": "P004",
-    "nombres": "Marcela"
+    "nombres": "Daniel Andres"
+  },
+  {
+    "apellidos": "Bedoya Arcila",
+    "identificacion": "P005",
+    "nombres": "Santiago"
+  },
+  {
+    "apellidos": "Garzon Hurtado",
+    "identificacion": "P006",
+    "nombres": "Carolina"
   }
 ]

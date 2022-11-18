@@ -106,17 +106,30 @@ public class Vuelo implements IFormatCSV {
   }
 
   @Override
-  public boolean equals(Object object) {
-    if (this == object) {
+  public boolean equals(Object obj) {
+    if (this == obj)
       return true;
-    }
-    if (!(object instanceof Vuelo)) {
+    if (obj == null)
       return false;
-    }
-
-    Vuelo vuelo = (Vuelo) object;
-    return fechaHora.equals(vuelo.getDateTime()) && avion.equals(vuelo.getAvion())
-        && trayecto.equals(vuelo.getTrayecto());
+    if (getClass() != obj.getClass())
+      return false;
+    Vuelo other = (Vuelo) obj;
+    if (fechaHora == null) {
+      if (other.fechaHora != null)
+        return false;
+    } else if (!fechaHora.equals(other.fechaHora))
+      return false;
+    if (trayecto == null) {
+      if (other.trayecto != null)
+        return false;
+    } else if (!trayecto.equals(other.trayecto))
+      return false;
+    if (avion == null) {
+      if (other.avion != null)
+        return false;
+    } else if (!avion.equals(other.avion))
+      return false;
+    return true;
   }
 
   @Override

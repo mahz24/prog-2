@@ -90,6 +90,19 @@ public class SillasService {
     return this.sillas.contains(silla);
   }
 
+  public AvionesService getAviones() {
+    return aviones;
+  }
+
+  public JSONObject get(String params) {
+    String[] parts = params.split("&");
+    Avion avionSilla = aviones.get(new Avion(parts[2], null));
+    int fila = Integer.parseInt(parts[0]);
+    char columna = parts[1].charAt(0);
+    Silla sillaSearched = this.get(new Silla(fila, columna, avionSilla));
+    return new JSONObject(sillaSearched);
+  }
+
   /**
    * Este metodo sube un archivo de datos de tipo csv a la carpeta data en la raiz
    * 
@@ -115,7 +128,7 @@ public class SillasService {
           sillas.add(new SillaEjecutiva(fila, columna, menu, licor, avion));
         } else if (data.length == 5) { // económicas
           sillas.add(new Silla(fila, columna, avion));
-        } else { // error
+        } else {
           throw new IOException("Se esperaban 5 o 7 datos por línea");
         }
 
@@ -206,6 +219,10 @@ public class SillasService {
     list.add("-".repeat(length));
 
     UtilFiles.writeText(list, fileName + ".txt");
+  }
+
+  public JSONArray getJSON() throws IOException {
+    return new JSONArray(UtilFiles.readText(fileName + ".json"));
   }
 
   public String getJSON(int index) {

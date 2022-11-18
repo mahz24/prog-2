@@ -1,10 +1,26 @@
 [
   {
-    "matricula": "MR4167",
-    "modelo": "Avianca 03"
+    "matricula": "HK-23354",
+    "modelo": "Anuel-prrr"
   },
   {
-    "matricula": "RS-456",
-    "modelo": "BAD-BUNNY-49"
+    "matricula": "PR-47541",
+    "modelo": "AVIANCA"
+  },
+  {
+    "matricula": "MC-54132",
+    "modelo": "AIRBOUS"
+  },
+  {
+    "matricula": "DN-45456",
+    "modelo": "NUEVI"
+  },
+  {
+    "matricula": "AM-1264",
+    "modelo": "MANILA"
+  },
+  {
+    "matricula": "sl-78954",
+    "modelo": "CARIÑOSO"
   }
 ]

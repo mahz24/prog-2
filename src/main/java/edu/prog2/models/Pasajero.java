@@ -88,15 +88,19 @@ public class Pasajero implements IFormatCSV {
 
   @Override
   public boolean equals(Object obj) {
-    if (this == obj) {
+    if (this == obj)
       return true;
-    }
-    if (!(obj instanceof Pasajero)) {
+    if (obj == null)
       return false;
-    }
-    Pasajero p = (Pasajero) obj;
-    return identificacion.equals(p.identificacion);
-
+    if (getClass() != obj.getClass())
+      return false;
+    Pasajero other = (Pasajero) obj;
+    if (identificacion == null) {
+      if (other.identificacion != null)
+        return false;
+    } else if (!identificacion.equals(other.identificacion))
+      return false;
+    return true;
   }
 
   @Override

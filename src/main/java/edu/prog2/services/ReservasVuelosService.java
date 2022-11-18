@@ -1,6 +1,7 @@
 package edu.prog2.services;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,9 +10,12 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import edu.prog2.helpers.UtilFiles;
+import edu.prog2.models.Avion;
+import edu.prog2.models.Pasajero;
 import edu.prog2.models.Reserva;
 import edu.prog2.models.ReservaVuelo;
 import edu.prog2.models.Silla;
+import edu.prog2.models.Trayecto;
 import edu.prog2.models.Vuelo;
 
 public class ReservasVuelosService {
@@ -19,6 +23,9 @@ public class ReservasVuelosService {
   private ReservasService reservas;
   private VuelosService vuelos;
   private SillasService sillas;
+  private AvionesService aviones;
+  private PasajerosService pasajeros;
+  private TrayectosService trayectos;
   private String fileName;
   private Reserva r;
   private Vuelo v;
@@ -27,12 +34,16 @@ public class ReservasVuelosService {
   /**
    * Constructor principal del controlador de las reservas en vuelo
    */
-  public ReservasVuelosService(ReservasService reservas, VuelosService vuelos, SillasService sillas)
+  public ReservasVuelosService(ReservasService reservas, VuelosService vuelos, SillasService sillas,
+      AvionesService aviones, PasajerosService pasajeros, TrayectosService trayectos)
       throws IOException {
     reservasVuelos = new ArrayList<>();
     this.reservas = reservas;
     this.vuelos = vuelos;
     this.sillas = sillas;
+    this.pasajeros = pasajeros;
+    this.aviones = aviones;
+    this.trayectos = trayectos;
     fileName = UtilFiles.FILE_PATH + "vuelos-de-reservas";
 
     if (UtilFiles.fileExists(fileName + ".csv")) {
@@ -104,6 +115,30 @@ public class ReservasVuelosService {
     return 0;
   }
 
+  public ReservasService getReservas() {
+    return reservas;
+  }
+
+  public VuelosService getVuelos() {
+    return vuelos;
+  }
+
+  public SillasService getSillas() {
+    return sillas;
+  }
+
+  public JSONObject get(String params) {
+    String[] pars = params.split("&");
+    Pasajero pasajero = this.pasajeros.get(new Pasajero(pars[1], null, null));
+    Reserva reserva = this.reservas.get(new Reserva(LocalDateTime.parse(pars[0]), null, pasajero));
+    Avion avion = this.aviones.get(new Avion(pars[5], null));
+    Trayecto trayecto = this.trayectos.get(new Trayecto(pars[3], pars[4], Duration.ZERO, 0));
+    Silla silla = this.sillas.get(new Silla(Integer.parseInt(pars[6]), pars[7].charAt(0), avion));
+    Vuelo vuelo = this.vuelos.get(new Vuelo(LocalDateTime.parse(pars[2]), trayecto, avion));
+    ReservaVuelo reservaVueloSearched = this.get(new ReservaVuelo(reserva, vuelo, silla));
+    return new JSONObject(reservaVueloSearched);
+  }
+
   /**
    * Este metodo sube un archivo de datos de tipo csv a la carpeta data en la raiz
    * 
@@ -125,18 +160,19 @@ public class ReservasVuelosService {
         Boolean disponible = sc.nextBoolean();
 
         for (Reserva reserva : reservas.getList()) {
-          if (reserva.getFechaHora() == fechaHora && reserva.getPasajero().getIdentificacion() == identificacion) {
+          if (reserva.getFechaHora().equals(fechaHora)
+              && reserva.getPasajero().getIdentificacion().equals(identificacion)) {
             r = new Reserva(reserva);
           }
         }
         for (Vuelo vuelo : vuelos.getList()) {
-          if (vuelo.getTrayecto().getDestino() == destino && vuelo.getTrayecto().getOrigen() == origen
-              && vuelo.getAvion().getMatricula() == matircula) {
+          if (vuelo.getTrayecto().getDestino().equals(destino) && vuelo.getTrayecto().getOrigen().equals(origen)
+              && vuelo.getAvion().getMatricula().equals(matircula)) {
             v = new Vuelo(vuelo);
           }
         }
         for (Silla silla : sillas.getList()) {
-          if (silla.getFila() == fila && silla.getColumna() == columna && silla.getDisponible() == disponible) {
+          if (silla.getFila() == fila && silla.getColumna() == columna && silla.getDisponible().equals(disponible)) {
             s = new Silla(silla);
           }
         }
@@ -159,8 +195,8 @@ public class ReservasVuelosService {
     return reservasVuelos;
   }
 
-  public String getJSON() throws IOException {
-    return UtilFiles.readText(fileName + ".json");
+  public JSONArray getJSON() throws IOException {
+    return new JSONArray(UtilFiles.readText(fileName + ".json"));
   }
 
   public String getJSON(int index) {

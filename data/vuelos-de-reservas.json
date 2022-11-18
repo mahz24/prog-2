@@ -3,35 +3,35 @@
     "checkIn": false,
     "reserva": {
       "pasajero": {
-        "apellidos": "Hurtado ",
+        "apellidos": "Mabesoy Torres",
         "identificacion": "P001",
-        "nombres": "Marco Antonio"
+        "nombres": "Ana Maria"
       },
       "cancelada": false,
-      "fechaHora": "2022-10-09T22:35:46.237107"
+      "fechaHora": "2022-11-17T22:14:56.301969"
     },
     "vuelo": {
-      "dateTime": "2022-10-09T22:35:27.845306",
+      "dateTime": "2022-11-16T11:42:42.740799",
       "trayecto": {
-        "duration": "PT45M",
+        "duration": "PT30M",
         "costo": 100,
         "origen": "Manizales",
-        "destino": "Medellín"
+        "destino": "Medellin"
       },
       "cancelado": false,
       "avion": {
-        "matricula": "MR4167",
-        "modelo": "Avianca 03"
+        "matricula": "sl-78954",
+        "modelo": "CARIÑOSO"
       }
     },
     "silla": {
-      "posicion": "03D",
-      "columna": "D",
-      "ubicacion": "PASILLO",
-      "fila": 3,
+      "posicion": "09B",
+      "columna": "B",
+      "ubicacion": "CENTRO",
+      "fila": 9,
       "avion": {
-        "matricula": "MR4167",
-        "modelo": "Avianca 03"
+        "matricula": "sl-78954",
+        "modelo": "CARIÑOSO"
       },
       "disponible": true
     }
@@ -40,35 +40,35 @@
     "checkIn": false,
     "reserva": {
       "pasajero": {
-        "apellidos": "Mabesoy",
-        "identificacion": "P004",
-        "nombres": "Marcela"
+        "apellidos": "Garzon Hurtado",
+        "identificacion": "P006",
+        "nombres": "Carolina"
       },
       "cancelada": false,
-      "fechaHora": "2022-10-09T22:36:15.636181"
+      "fechaHora": "2022-11-17T22:15:51.558426"
     },
     "vuelo": {
-      "dateTime": "2022-10-09T22:35:27.845306",
+      "dateTime": "2022-11-16T11:42:42.740799",
       "trayecto": {
-        "duration": "PT45M",
+        "duration": "PT30M",
         "costo": 100,
         "origen": "Manizales",
-        "destino": "Medellín"
+        "destino": "Medellin"
       },
       "cancelado": false,
       "avion": {
-        "matricula": "MR4167",
-        "modelo": "Avianca 03"
+        "matricula": "sl-78954",
+        "modelo": "CARIÑOSO"
       }
     },
     "silla": {
-      "posicion": "05A",
-      "columna": "A",
-      "ubicacion": "VENTANA",
-      "fila": 5,
+      "posicion": "09E",
+      "columna": "E",
+      "ubicacion": "CENTRO",
+      "fila": 9,
       "avion": {
-        "matricula": "MR4167",
-        "modelo": "Avianca 03"
+        "matricula": "sl-78954",
+        "modelo": "CARIÑOSO"
       },
       "disponible": true
     }

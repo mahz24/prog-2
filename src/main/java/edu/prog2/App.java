@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Locale;
 
 import edu.prog2.helpers.Keyboard;
 import edu.prog2.models.*;
@@ -20,12 +21,14 @@ public class App {
   static ReservasVuelosService reservasVuelos;
 
   public static void main(String[] args) throws Exception {
+    Locale.setDefault(Locale.ENGLISH);
     pasajeros = new PasajerosService();
     aviones = new AvionesService();
     trayectos = new TrayectosService();
     vuelos = new VuelosService(trayectos, aviones);
     sillas = new SillasService(aviones);
     reservas = new ReservasService(pasajeros);
+    reservasVuelos = new ReservasVuelosService(reservas, vuelos, sillas, aviones, pasajeros, trayectos);
     menu();
   }
 
@@ -291,7 +294,7 @@ public class App {
 
     do {
       System.out.println("Trayectos disponibles:");
-      for (int i = 0; i < pasajeros.size(); i++) {
+      for (int i = 0; i < trayectos.size(); i++) {
         Trayecto t = trayectos.getList().get(i);
         System.out.printf("%2d: %-10s%-10s%-10s%-4s%n", (i + 1), t.getOrigen(),
             t.getDestino(), t.getCosto(), t.getDuration());
@@ -408,7 +411,6 @@ public class App {
       if (sillaDisponibleEnVuelo(sillaElegida, vueloElegido)) {
         sillaElegida.setDisponible(false);
       }
-      System.out.println(sillaDisponibleEnVuelo(sillaElegida, vueloElegido));
       nuevaReservaVuelo = new ReservaVuelo(nuevaReserva, vueloElegido, sillaElegida);
       if (reservasVuelos.add(nuevaReservaVuelo)) {
         reservas.add(nuevaReserva);

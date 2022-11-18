@@ -1,6 +1,7 @@
 package edu.prog2.services;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -88,6 +89,14 @@ public class VuelosService {
     return this.vuelos.contains(vuelo);
   }
 
+  public AvionesService getAviones() {
+    return aviones;
+  }
+
+  public TrayectosService getTrayectos() {
+    return trayectos;
+  }
+
   /**
    * Este metodo muestra el tamaño del arraylist
    * 
@@ -95,6 +104,15 @@ public class VuelosService {
    */
   public int size() {
     return vuelos.size();
+  }
+
+  public JSONObject get(String params) {
+    String[] parts = params.split("&");
+    LocalDateTime fechaHoraVuelo = LocalDateTime.parse(parts[0]);
+    Trayecto trayectoSearched = trayectos.get(new Trayecto(parts[1], parts[2], Duration.ZERO, 0));
+    Avion avionSearched = aviones.get(new Avion(parts[3], null));
+    Vuelo vueloSearched = this.get(new Vuelo(fechaHoraVuelo, trayectoSearched, avionSearched));
+    return new JSONObject(vueloSearched);
   }
 
   /**
@@ -114,9 +132,9 @@ public class VuelosService {
         String matricula = sc.next();
 
         for (Trayecto trayecto : trayectos.getList()) {
-          if (trayecto.getDestino() == destino && trayecto.getOrigen() == origen) {
+          if (trayecto.getDestino().equals(destino) && trayecto.getOrigen().equals(origen)) {
             for (Avion avion : aviones.getList()) {
-              if (avion.getMatricula() == matricula) {
+              if (avion.getMatricula().equals(matricula)) {
                 vuelos.add(new Vuelo(fechaHora, trayecto, avion));
               }
             }

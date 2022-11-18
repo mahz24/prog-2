@@ -98,6 +98,11 @@ public class PasajerosService {
     return pasajeros.size();
   }
 
+  public JSONObject get(String id) {
+    Pasajero pasajeroSearched = this.get(new Pasajero(id, null, null));
+    return new JSONObject(pasajeroSearched);
+  }
+
   /**
    * Este metodo sube un archivo de datos de tipo csv a la carpeta data en la raiz
    * 

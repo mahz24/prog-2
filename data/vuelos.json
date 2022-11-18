@@ -1,14 +1,44 @@
-[{
-  "dateTime": "2022-11-10T10:48:32.484453",
-  "trayecto": {
-    "duration": "PT45M",
-    "costo": 100,
-    "origen": "Manizales",
-    "destino": "Medellín"
+[
+  {
+    "dateTime": "2022-11-16T11:42:42.740799",
+    "trayecto": {
+      "duration": "PT30M",
+      "costo": 100,
+      "origen": "Manizales",
+      "destino": "Medellin"
+    },
+    "cancelado": false,
+    "avion": {
+      "matricula": "sl-78954",
+      "modelo": "CARIÑOSO"
+    }
   },
-  "cancelado": false,
-  "avion": {
-    "matricula": "MR4167",
-    "modelo": "Avianca 03"
+  {
+    "dateTime": "2022-11-16T11:43:05.076357",
+    "trayecto": {
+      "duration": "PT2H",
+      "costo": 4000,
+      "origen": "Bogota",
+      "destino": "Cancun"
+    },
+    "cancelado": false,
+    "avion": {
+      "matricula": "sl-78954",
+      "modelo": "CARIÑOSO"
+    }
+  },
+  {
+    "dateTime": "2022-11-16T11:43:43.425209",
+    "trayecto": {
+      "duration": "PT2H",
+      "costo": 4000,
+      "origen": "Cancun",
+      "destino": "Bogota"
+    },
+    "cancelado": false,
+    "avion": {
+      "matricula": "sl-78954",
+      "modelo": "CARIÑOSO"
+    }
   }
-}]
+]

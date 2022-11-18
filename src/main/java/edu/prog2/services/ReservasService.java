@@ -70,7 +70,7 @@ public class ReservasService {
 
   /**
    * Este metodo devuelve el arraylist de reservas
-   * 
+   *
    * @return retorna el arraylist de reservas
    */
   public ArrayList<Reserva> getList() {
@@ -97,6 +97,14 @@ public class ReservasService {
     return reservas.size();
   }
 
+  public JSONObject get(String params) {
+    String[] parts = params.split("&");
+    LocalDateTime fechaHoraReserva = LocalDateTime.parse(parts[0]);
+    Pasajero pasajeroReserva = pasajeros.get(new Pasajero(parts[1], null, null));
+    Reserva reservaSearched = this.get(new Reserva(fechaHoraReserva, null, pasajeroReserva));
+    return new JSONObject(reservaSearched);
+  }
+
   /**
    * Este metodo sube un archivo de datos de tipo csv a la carpeta data en la raiz
    * 
@@ -113,7 +121,7 @@ public class ReservasService {
         String identificacion = sc.next();
 
         for (Pasajero pasajero : pasajeros.getList()) {
-          if (pasajero.getIdentificacion() == identificacion) {
+          if (pasajero.getIdentificacion().equals(identificacion)) {
             p = new Pasajero(pasajero);
           }
         }
@@ -136,8 +144,8 @@ public class ReservasService {
     return reservas;
   }
 
-  public String getJSON() throws IOException {
-    return UtilFiles.readText(fileName + ".json");
+  public JSONArray getJSON() throws IOException {
+    return new JSONArray(UtilFiles.readText(fileName + ".json"));
   }
 
   public String getJSON(int index) {

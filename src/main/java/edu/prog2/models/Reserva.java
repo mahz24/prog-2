@@ -91,15 +91,20 @@ public class Reserva implements IFormatCSV {
   }
 
   @Override
-  public boolean equals(Object object) {
-    if (this == object) {
+  public boolean equals(Object obj) {
+    if (this == obj)
       return true;
-    }
-    if (!(object instanceof Reserva)) {
+    if (obj == null)
       return false;
-    }
-    Reserva reserva = (Reserva) object;
-    return fechaHora.equals(reserva.fechaHora);
+    if (getClass() != obj.getClass())
+      return false;
+    Reserva other = (Reserva) obj;
+    if (fechaHora == null) {
+      if (other.fechaHora != null)
+        return false;
+    } else if (!fechaHora.equals(other.fechaHora))
+      return false;
+    return true;
   }
 
   @Override

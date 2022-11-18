@@ -152,16 +152,18 @@ public class Silla implements IFormatCSV {
   }
 
   @Override
-  public boolean equals(Object object) {
-    if (this == object) {
-      return true;
-    }
-    if (!(object instanceof Silla)) {
+  public boolean equals(Object obj) {
+    Silla other = (Silla) obj;
+    if (avion == null) {
+      if (other.avion != null)
+        return false;
+    } else if (!avion.equals(other.avion))
       return false;
-    }
-
-    Silla silla = (Silla) object;
-    return fila == silla.getFila() && columna == silla.getColumna() && avion.equals(silla.getAvion());
+    if (columna != other.columna)
+      return false;
+    if (fila != other.fila)
+      return false;
+    return true;
   }
 
   @Override

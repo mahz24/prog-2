@@ -117,17 +117,30 @@ public class ReservaVuelo implements IFormatCSV {
   }
 
   @Override
-  public boolean equals(Object object) {
-    if (this == object) {
+  public boolean equals(Object obj) {
+    if (this == obj)
       return true;
-    }
-    if (!(object instanceof ReservaVuelo)) {
+    if (obj == null)
       return false;
-    }
-
-    ReservaVuelo reservaVuelo = (ReservaVuelo) object;
-    return vuelo.equals(reservaVuelo.getVuelo()) && silla.equals(reservaVuelo.getSilla())
-        && reserva.equals(reservaVuelo.getReserva());
+    if (getClass() != obj.getClass())
+      return false;
+    ReservaVuelo other = (ReservaVuelo) obj;
+    if (vuelo == null) {
+      if (other.vuelo != null)
+        return false;
+    } else if (!vuelo.equals(other.vuelo))
+      return false;
+    if (reserva == null) {
+      if (other.reserva != null)
+        return false;
+    } else if (!reserva.equals(other.reserva))
+      return false;
+    if (silla == null) {
+      if (other.silla != null)
+        return false;
+    } else if (!silla.equals(other.silla))
+      return false;
+    return true;
   }
 
   @Override

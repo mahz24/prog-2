@@ -94,6 +94,12 @@ public class TrayectosService {
     return trayectos.size();
   }
 
+  public JSONObject get(String params) {
+    String[] parts = params.split("&");
+    Trayecto trayectoSearched = this.get(new Trayecto(parts[0], parts[1], Duration.ZERO, 0));
+    return new JSONObject(trayectoSearched);
+  }
+
   /**
    * Este metodo añade los datos del trayecto al archivo .csv en la carpeta data
    * 

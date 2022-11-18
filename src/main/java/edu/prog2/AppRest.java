@@ -17,5 +17,15 @@ public class AppRest {
 
     VuelosService vuelosService = new VuelosService(trayectosService, avionesService);
     new VuelosController(vuelosService);
+
+    SillasService sillasService = new SillasService(avionesService);
+    new SillasController(sillasService);
+
+    ReservasService reservasService = new ReservasService(pasajerosService);
+    new ReservasController(reservasService);
+
+    ReservasVuelosService reservasVuelosService = new ReservasVuelosService(reservasService, vuelosService,
+        sillasService, avionesService, pasajerosService, trayectosService);
+    new ReservasVuelosController(reservasVuelosService);
   }
 }

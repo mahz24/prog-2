@@ -4,37 +4,37 @@ import static spark.Spark.*;
 
 import org.json.JSONObject;
 
+import edu.prog2.services.ReservasVuelosService;
 import edu.prog2.helpers.StandardResponse;
 
-import edu.prog2.services.VuelosService;
+public class ReservasVuelosController {
 
-public class VuelosController {
+  public ReservasVuelosController(final ReservasVuelosService reservasVuelosService) {
 
-  public VuelosController(final VuelosService vuelosService) {
-
-    path("/vuelos", () -> {
+    path("/vuelos-reservas", () -> {
 
       get("", (req, res) -> {
         res.type("application/json");
         try {
           res.status(201);
-          return new StandardResponse(201, "ok", vuelosService.getJSON());
+          return new StandardResponse(201, "ok", reservasVuelosService.getJSON());
         } catch (Exception exception) {
           return new StandardResponse(404, exception);
         }
       });
 
-      get("/:vuelo", (req, res) -> {
+      get("/:reserva-vuelo", (req, res) -> {
         res.type("application/json");
         try {
           res.status(201);
-          String params = req.params(":vuelo");
-          JSONObject json = vuelosService.get(params);
+          String params = req.params(":reserva-vuelo");
+          JSONObject json = reservasVuelosService.get(params);
           return new StandardResponse(201, "ok", json);
         } catch (Exception exception) {
           return new StandardResponse(404, exception);
         }
       });
+
     });
   }
 }

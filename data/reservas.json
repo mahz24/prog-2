@@ -1,20 +1,20 @@
 [
   {
     "pasajero": {
-      "apellidos": "Hurtado ",
+      "apellidos": "Mabesoy Torres",
       "identificacion": "P001",
-      "nombres": "Marco Antonio"
+      "nombres": "Ana Maria"
     },
     "cancelada": false,
-    "fechaHora": "2022-10-09T22:35:46.237107"
+    "fechaHora": "2022-11-17T22:14:56.301969"
   },
   {
     "pasajero": {
-      "apellidos": "Mabesoy",
-      "identificacion": "P004",
-      "nombres": "Marcela"
+      "apellidos": "Garzon Hurtado",
+      "identificacion": "P006",
+      "nombres": "Carolina"
     },
     "cancelada": false,
-    "fechaHora": "2022-10-09T22:36:15.636181"
+    "fechaHora": "2022-11-17T22:15:51.558426"
   }
 ]

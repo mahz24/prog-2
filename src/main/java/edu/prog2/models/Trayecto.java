@@ -121,16 +121,25 @@ public class Trayecto implements IFormatCSV {
   }
 
   @Override
-  public boolean equals(Object object) {
-    if (this == object) {
+  public boolean equals(Object obj) {
+    if (this == obj)
       return true;
-    }
-
-    if (!(object instanceof Trayecto)) {
+    if (obj == null)
       return false;
-    }
-    Trayecto trayecto = (Trayecto) object;
-    return origen.equals(trayecto.origen) && destino.equals(trayecto.getDestino());
+    if (getClass() != obj.getClass())
+      return false;
+    Trayecto other = (Trayecto) obj;
+    if (origen == null) {
+      if (other.origen != null)
+        return false;
+    } else if (!origen.equals(other.origen))
+      return false;
+    if (destino == null) {
+      if (other.destino != null)
+        return false;
+    } else if (!destino.equals(other.destino))
+      return false;
+    return true;
   }
 
   @Override

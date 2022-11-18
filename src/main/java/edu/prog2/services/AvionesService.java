@@ -95,6 +95,11 @@ public class AvionesService {
     return aviones.size();
   }
 
+  public JSONObject get(String matricula) {
+    Avion avionSearched = this.get(new Avion(matricula, null));
+    return new JSONObject(avionSearched);
+  }
+
   /**
    * Este metodo sube un archivo de datos de tipo csv a la carpeta data en la raiz
    * 
@@ -108,7 +113,6 @@ public class AvionesService {
       while (sc.hasNext()) {
         String matricula = sc.next();
         String modelo = sc.next();
-
         aviones.add(new Avion(matricula, modelo));
         sc.nextLine();
       }

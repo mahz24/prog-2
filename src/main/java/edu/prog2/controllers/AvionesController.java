@@ -6,7 +6,6 @@ import org.json.JSONObject;
 
 import edu.prog2.helpers.StandardResponse;
 import edu.prog2.services.AvionesService;
-import edu.prog2.models.Avion;
 
 public class AvionesController {
 
@@ -29,8 +28,7 @@ public class AvionesController {
         try {
           res.status(201);
           String matricula = req.params(":matricula");
-          Avion avion = new Avion(matricula, null);
-          JSONObject json = new JSONObject(avionesService.getJSON(avion));
+          JSONObject json = avionesService.get(matricula);
           return new StandardResponse(201, "ok", json);
         } catch (Exception exception) {
           return new StandardResponse(404, exception);

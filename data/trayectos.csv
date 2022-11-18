@@ -1,2 +1,8 @@
-Medellín;Manizales;PT1H;100,0
-Cali;Medellín;PT40M;200,0
+Manizales;Medellin;PT30M;100.0
+Medellin;Manizales;PT30M;100.0
+Cali;Montelibano;PT40M;105.4
+Montelibano;Cali;PT40M;110.5
+Bogota;Cancun;PT2H;4000.0
+Cancun;Bogota;PT2H;4000.0
+Qatar;Pereira;PT8H;10000.0
+Pereira;Qatar;PT8H30M;10000.0

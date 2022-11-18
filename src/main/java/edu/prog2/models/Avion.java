@@ -66,15 +66,19 @@ public class Avion implements IFormatCSV {
 
   @Override
   public boolean equals(Object obj) {
-    if (this == obj) {
+    if (this == obj)
       return true;
-    }
-    if (!(obj instanceof Avion)) {
+    if (obj == null)
       return false;
-    }
-    Avion a = (Avion) obj;
-    return matricula.equals(a.matricula);
-
+    if (getClass() != obj.getClass())
+      return false;
+    Avion other = (Avion) obj;
+    if (matricula == null) {
+      if (other.matricula != null)
+        return false;
+    } else if (!matricula.equals(other.matricula))
+      return false;
+    return true;
   }
 
   @Override

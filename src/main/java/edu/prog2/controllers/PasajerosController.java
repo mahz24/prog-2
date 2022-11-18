@@ -6,7 +6,6 @@ import org.json.JSONObject;
 
 import edu.prog2.helpers.StandardResponse;
 import edu.prog2.services.PasajerosService;
-import edu.prog2.models.Pasajero;
 
 public class PasajerosController {
 
@@ -31,8 +30,7 @@ public class PasajerosController {
         try {
           res.status(201);
           String id = req.params(":id");
-          Pasajero pasajero = new Pasajero(id, null, null);
-          JSONObject json = new JSONObject(pasajerosService.get(pasajero));
+          JSONObject json = pasajerosService.get(id);
           return new StandardResponse(201, "ok", json);
         } catch (Exception exception) {
           res.status(404);

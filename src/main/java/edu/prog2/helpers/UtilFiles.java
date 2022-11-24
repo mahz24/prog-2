@@ -7,6 +7,10 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.util.List;
+import java.io.StringReader;
+import java.util.Properties;
+import org.json.Property;
+import org.json.JSONObject;
 
 import org.json.JSONArray;
 
@@ -85,5 +89,13 @@ public class UtilFiles {
   public static void writeData(List<?> list, String fileName) throws IOException {
     writeCSV(list, fileName + ".csv");
     writeJSON(list, fileName + ".json");
+  }
+
+  public static JSONObject paramsToJson(String s) throws IOException {
+    s = s.replace("&", "\n");
+    StringReader reader = new StringReader(s);
+    Properties properties = new Properties();
+    properties.load(reader);
+    return Property.toJSONObject(properties);
   }
 }

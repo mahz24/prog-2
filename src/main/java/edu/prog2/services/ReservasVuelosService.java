@@ -199,11 +199,11 @@ public class ReservasVuelosService {
     return new JSONArray(UtilFiles.readText(fileName + ".json"));
   }
 
-  public String getJSON(int index) {
-    return new JSONObject(reservasVuelos.get(index)).toString(2);
+  public JSONObject getJSON(int index) {
+    return new JSONObject(reservasVuelos.get(index));
   }
 
-  public String getJSON(ReservaVuelo rs) {
+  public JSONObject getJSON(ReservaVuelo rs) {
     int index = reservasVuelos.indexOf(rs);
     return index > -1 ? getJSON(index) : null;
   }

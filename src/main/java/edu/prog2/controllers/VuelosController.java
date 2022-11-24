@@ -35,6 +35,19 @@ public class VuelosController {
           return new StandardResponse(404, exception);
         }
       });
+
+      get("/:vuelo", (request, response) -> {
+        response.type("application/json");
+        try {
+          String params = request.params(":vuelo");
+          JSONObject json = vuelosService.get(params);
+          response.status(201);
+          return new StandardResponse(200, "ok", json);
+        } catch (Exception e) {
+          response.status(404);
+          return new StandardResponse(404, e);
+        }
+      });
     });
   }
 }

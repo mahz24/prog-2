@@ -136,11 +136,11 @@ public class AvionesService {
     return new JSONArray(UtilFiles.readText(fileName + ".json"));
   }
 
-  public String getJSON(int index) {
-    return new JSONObject(aviones.get(index)).toString(2);
+  public JSONObject getJSON(int index) {
+    return new JSONObject(aviones.get(index));
   }
 
-  public String getJSON(Avion avion) {
+  public JSONObject getJSON(Avion avion) {
     int index = aviones.indexOf(avion);
     return index > -1 ? getJSON(index) : null;
   }

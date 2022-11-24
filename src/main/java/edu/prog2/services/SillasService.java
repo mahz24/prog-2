@@ -225,11 +225,11 @@ public class SillasService {
     return new JSONArray(UtilFiles.readText(fileName + ".json"));
   }
 
-  public String getJSON(int index) {
-    return new JSONObject(sillas.get(index)).toString(2);
+  public JSONObject getJSON(int index) {
+    return new JSONObject(sillas.get(index));
   }
 
-  public String getJSON(Silla silla) {
+  public JSONObject getJSON(Silla silla) {
     int index = sillas.indexOf(silla);
     return index > -1 ? getJSON(index) : null;
   }

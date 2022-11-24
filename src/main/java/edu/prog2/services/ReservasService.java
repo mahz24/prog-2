@@ -148,11 +148,11 @@ public class ReservasService {
     return new JSONArray(UtilFiles.readText(fileName + ".json"));
   }
 
-  public String getJSON(int index) {
-    return new JSONObject(reservas.get(index)).toString(2);
+  public JSONObject getJSON(int index) {
+    return new JSONObject(reservas.get(index));
   }
 
-  public String getJSON(Reserva reserva) {
+  public JSONObject getJSON(Reserva reserva) {
     int index = reservas.indexOf(reserva);
     return index > -1 ? getJSON(index) : null;
   }

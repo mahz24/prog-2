@@ -137,11 +137,11 @@ public class TrayectosService {
     return new JSONArray(UtilFiles.readText(fileName + ".json"));
   }
 
-  public String getJSON(int index) {
-    return new JSONObject(trayectos.get(index)).toString(1);
+  public JSONObject getJSON(int index) {
+    return new JSONObject(trayectos.get(index));
   }
 
-  public String getJSON(Trayecto trayecto) {
+  public JSONObject getJSON(Trayecto trayecto) {
     int index = trayectos.indexOf(trayecto);
     return index > -1 ? getJSON(index) : null;
   }

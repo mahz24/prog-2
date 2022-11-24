@@ -106,13 +106,27 @@ public class VuelosService {
     return vuelos.size();
   }
 
-  public JSONObject get(String params) {
+  public JSONObject getVuelo(String params) {
     String[] parts = params.split("&");
     LocalDateTime fechaHoraVuelo = LocalDateTime.parse(parts[0]);
     Trayecto trayectoSearched = trayectos.get(new Trayecto(parts[1], parts[2], Duration.ZERO, 0));
     Avion avionSearched = aviones.get(new Avion(parts[3], null));
     Vuelo vueloSearched = this.get(new Vuelo(fechaHoraVuelo, trayectoSearched, avionSearched));
     return new JSONObject(vueloSearched);
+  }
+
+  public JSONObject get(String paramsVuelo) throws IOException {
+
+    JSONObject json = UtilFiles.paramsToJson(paramsVuelo);
+
+    Avion avion = aviones.get(new Avion(json.getString("avion"), ""));
+
+    Trayecto trayecto = trayectos.get(
+        new Trayecto(
+            json.getString("origen"), json.getString("destino"), Duration.ZERO, 0.0));
+
+    LocalDateTime fechaHora = LocalDateTime.parse(json.getString("fechaHora"));
+    return getJSON(new Vuelo(fechaHora, trayecto, avion));
   }
 
   /**
@@ -178,11 +192,11 @@ public class VuelosService {
     return new JSONArray(UtilFiles.readText(fileName + ".json"));
   }
 
-  public String getJSON(int index) {
-    return new JSONObject(vuelos.get(index)).toString(2);
+  public JSONObject getJSON(int index) {
+    return new JSONObject(vuelos.get(index));
   }
 
-  public String getJSON(Vuelo vuelo) {
+  public JSONObject getJSON(Vuelo vuelo) {
     int index = vuelos.indexOf(vuelo);
     return index > -1 ? getJSON(index) : null;
   }

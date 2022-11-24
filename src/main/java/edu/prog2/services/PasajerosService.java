@@ -156,11 +156,11 @@ public class PasajerosService {
 
   }
 
-  public String getJSON(int index) {
-    return new JSONObject(pasajeros.get(index)).toString(1);
+  public JSONObject getJSON(int index) {
+    return new JSONObject(pasajeros.get(index));
   }
 
-  public String getJSON(Pasajero pasajero) {
+  public JSONObject getJSON(Pasajero pasajero) {
     int index = pasajeros.indexOf(pasajero);
     return index > -1 ? getJSON(index) : null;
   }

@@ -15,37 +15,40 @@ public class VuelosController {
     path("/vuelos", () -> {
 
       get("", (req, res) -> {
-        res.type("application/json");
         try {
-          res.status(201);
-          return new StandardResponse(201, "ok", vuelosService.getJSON());
+          return new StandardResponse(res, 201, "ok", vuelosService.getJSON());
         } catch (Exception exception) {
-          return new StandardResponse(404, exception);
+          return new StandardResponse(res, 404, exception);
         }
       });
 
       get("/:vuelo", (req, res) -> {
-        res.type("application/json");
         try {
-          res.status(201);
           String params = req.params(":vuelo");
           JSONObject json = vuelosService.get(params);
-          return new StandardResponse(201, "ok", json);
+          return new StandardResponse(res, 201, "ok", json);
         } catch (Exception exception) {
-          return new StandardResponse(404, exception);
+          return new StandardResponse(res, 404, exception);
         }
       });
 
-      get("/:vuelo", (request, response) -> {
-        response.type("application/json");
+      get("/:vuelo", (req, res) -> {
         try {
-          String params = request.params(":vuelo");
+          String params = req.params(":vuelo");
           JSONObject json = vuelosService.get(params);
-          response.status(201);
-          return new StandardResponse(200, "ok", json);
+          return new StandardResponse(res, 200, "ok", json);
         } catch (Exception e) {
-          response.status(404);
-          return new StandardResponse(404, e);
+          return new StandardResponse(res, 404, e);
+        }
+      });
+
+      post("", (req, res) -> {
+        try {
+          JSONObject json = new JSONObject(req.body());
+          vuelosService.add(json);
+          return new StandardResponse(res, 201, "ok");
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
         }
       });
     });

@@ -193,6 +193,12 @@ public class SillasService {
     }
   }
 
+  public void create(
+      String matriculaAvion, int ejecutivas, int economicas) throws IOException {
+    Avion avion = aviones.get(new Avion(matriculaAvion, ""));
+    create(avion, ejecutivas, economicas);
+  }
+
   public ArrayList<Silla> loadJSON() throws IOException {
     sillas = new ArrayList<>();
     String data = UtilFiles.readText(fileName + ".json");

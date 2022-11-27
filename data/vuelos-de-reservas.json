@@ -1,6 +1,20 @@
 [
   {
     "checkIn": false,
+    "vuelo": {
+      "dateTime": "2022-11-16T11:42:42.740799",
+      "trayecto": {
+        "duration": "PT30M",
+        "costo": 100,
+        "origen": "Manizales",
+        "destino": "Medellin"
+      },
+      "cancelado": false,
+      "avion": {
+        "matricula": "sl-78954",
+        "modelo": "CARIÑOSO"
+      }
+    },
     "reserva": {
       "pasajero": {
         "apellidos": "Mabesoy Torres",
@@ -10,6 +24,20 @@
       "cancelada": false,
       "fechaHora": "2022-11-17T22:14:56.301969"
     },
+    "silla": {
+      "columna": "B",
+      "posicion": "09B",
+      "ubicacion": "CENTRO",
+      "fila": 9,
+      "avion": {
+        "matricula": "HK2009",
+        "modelo": "Airbus A321XLR2"
+      },
+      "disponible": true
+    }
+  },
+  {
+    "checkIn": false,
     "vuelo": {
       "dateTime": "2022-11-16T11:42:42.740799",
       "trayecto": {
@@ -24,20 +52,6 @@
         "modelo": "CARIÑOSO"
       }
     },
-    "silla": {
-      "posicion": "09B",
-      "columna": "B",
-      "ubicacion": "CENTRO",
-      "fila": 9,
-      "avion": {
-        "matricula": "sl-78954",
-        "modelo": "CARIÑOSO"
-      },
-      "disponible": true
-    }
-  },
-  {
-    "checkIn": false,
     "reserva": {
       "pasajero": {
         "apellidos": "Garzon Hurtado",
@@ -47,28 +61,51 @@
       "cancelada": false,
       "fechaHora": "2022-11-17T22:15:51.558426"
     },
-    "vuelo": {
-      "dateTime": "2022-11-16T11:42:42.740799",
-      "trayecto": {
-        "duration": "PT30M",
-        "costo": 100,
-        "origen": "Manizales",
-        "destino": "Medellin"
-      },
-      "cancelado": false,
-      "avion": {
-        "matricula": "sl-78954",
-        "modelo": "CARIÑOSO"
-      }
-    },
     "silla": {
-      "posicion": "09E",
       "columna": "E",
+      "posicion": "09E",
       "ubicacion": "CENTRO",
       "fila": 9,
       "avion": {
-        "matricula": "sl-78954",
-        "modelo": "CARIÑOSO"
+        "matricula": "HK2009",
+        "modelo": "Airbus A321XLR2"
+      },
+      "disponible": true
+    }
+  },
+  {
+    "checkIn": false,
+    "vuelo": {
+      "dateTime": "2022-10-25T22:19:25.151863",
+      "trayecto": {
+        "duration": "PT50M",
+        "costo": 200000,
+        "origen": "Pasto",
+        "destino": "Leticia"
+      },
+      "cancelado": false,
+      "avion": {
+        "matricula": "HK2009",
+        "modelo": "Airbus A321XLR2"
+      }
+    },
+    "reserva": {
+      "pasajero": {
+        "apellidos": "Mabesoy Torres",
+        "identificacion": "P001",
+        "nombres": "Ana Maria"
+      },
+      "cancelada": false,
+      "fechaHora": "2022-10-27T06:33:35.449360"
+    },
+    "silla": {
+      "columna": "A",
+      "posicion": "05A",
+      "ubicacion": "VENTANA",
+      "fila": 5,
+      "avion": {
+        "matricula": "HK2009",
+        "modelo": "Airbus A321XLR2"
       },
       "disponible": true
     }

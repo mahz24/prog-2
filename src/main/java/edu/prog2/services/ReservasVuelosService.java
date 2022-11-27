@@ -71,6 +71,19 @@ public class ReservasVuelosService {
     return ok;
   }
 
+  public void add(JSONObject json) throws IOException {
+    Pasajero pasajero = pasajeros.get(new Pasajero(json.getString("pasajero"), null, null));
+    Reserva reserva = reservas
+        .get(new Reserva(LocalDateTime.parse(json.getString("fechaHoraReserva")), null, pasajero));
+    Trayecto trayecto = trayectos
+        .get(new Trayecto(json.getString("origen"), json.getString("destino"), Duration.ZERO, 0));
+    Avion avion = aviones.get(new Avion(json.getString("avion"), null));
+    Silla silla = sillas.get(new Silla(json.getInt("fila"), json.getString("columna").charAt(0), avion));
+    Vuelo vuelo = vuelos.get(new Vuelo(LocalDateTime.parse(json.getString("fechaHoraVuelo")), trayecto, avion));
+    ReservaVuelo rv = new ReservaVuelo(reserva, vuelo, silla);
+    this.add(rv);
+  }
+
   public ReservaVuelo get(int index) {
     return reservasVuelos.get(index);
   }

@@ -24,7 +24,7 @@ public class Trayecto implements IFormatCSV {
     this(
         json.getString("origen"),
         json.getString("destino"),
-        Duration.parse(json.getString("duracion")),
+        Duration.parse(json.getString("duration")),
         json.getDouble("costo"));
   }
 

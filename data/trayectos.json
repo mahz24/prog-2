@@ -46,5 +46,23 @@
     "costo": 10000,
     "origen": "Pereira",
     "destino": "Qatar"
+  },
+  {
+    "duration": "PT40M",
+    "costo": 200,
+    "origen": "El Bagre",
+    "destino": "Caucasia"
+  },
+  {
+    "duration": "PT50M",
+    "costo": 200000,
+    "origen": "Villavicencio",
+    "destino": "Leticia"
+  },
+  {
+    "duration": "PT50M",
+    "costo": 200000,
+    "origen": "Pasto",
+    "destino": "Leticia"
   }
 ]

@@ -1,0 +1,155 @@
+@baseURL=http://localhost:4567
+
+// Aviones
+###  obtener los aviones
+GET {{baseURL}}/aviones
+content-type: application/json
+
+### obtener avion en especifico
+GET {{baseURL}}/aviones/HK-23354
+content-type: application/json
+
+### añadir avion 
+POST {{baseURL}}/aviones
+content-type: application/json
+
+{ 
+  "matricula": "HK20010", 
+  "modelo": "Airbus A321XLR2"
+}
+
+### actualizar avion
+PUT {{baseURL}}/aviones/HK2005
+content-type: application/json
+
+{ 
+  "matricula": "HK2005", 
+  "modelo": "Airbus Airbus 330-1"
+}
+
+//Pasajeros
+###obtener pasajeros
+GET {{baseURL}}/pasajeros
+Content-Type: application/json
+
+###obtener pasajero en especifico
+GET {{baseURL}}/pasajeros/P001
+Content-Type: application/json
+
+### agregar un pasajero
+POST {{baseURL}}/pasajeros
+Content-Type: application/json
+ 
+{
+    "identificacion" : "P0022",
+    "nombres": "Yuliet",
+    "apellidos" : "Yourcenar"
+}
+
+
+//Reservas
+###obtener todos las reservas
+GET {{baseURL}}/reservas
+Content-Type: application/json
+
+###obtener una reserva especifica
+GET {{baseURL}}/reservas/2022-11-17T22:14:56.301969&P001
+Content-Type: application/json
+
+### Crear una reserva
+POST {{baseURL}}/reservas
+Content-Type: application/json
+
+{
+    "fechaHora": "2022-10-27T06:33:35.449360",
+    "pasajero": "P001"
+}
+
+
+// Sillas
+### obtener todos las sillas
+GET {{baseURL}}/sillas
+Content-Type: application/json
+
+###obtener una silla en especifico
+GET {{baseURL}}/sillas/1&A&HK-23354
+Content-Type: application/json
+
+### asignarle sillas a un avión
+POST {{baseURL}}/sillas
+Content-Type: application/json
+
+{ 
+  "avion": "HK2009", 
+  "ejecutivas": 16, 
+  "economicas": 42
+}
+
+
+//Reservas en vuelo
+###obtener todas las reservas en vuelo
+GET {{baseURL}}/vuelos-reservas
+Content-Type: application/json
+
+###obtener una reserva en vuelo en especifico
+GET {{baseURL}}/vuelos-reservas/2022-11-17T22:14:56.301969&P001&2022-11-16T11:42:42.740799&Manizales&Medellin&sl-78954&9&B
+Content-Type: application/json
+
+###
+POST {{baseURL}}/vuelos-reservas
+Content-Type: application/json
+
+{
+    "fechaHoraReserva": "2022-10-27T06:33:35.449360",
+    "pasajero": "P001",
+    "fechaHoraVuelo": "2022-10-25T22:19:25.151863",
+    "origen": "Pasto",
+    "destino": "Leticia",
+    "avion": "HK2009",
+    "fila": 5,
+    "columna": "AResponse res"
+}
+
+
+//Trayectos
+###obtener todos los trayectos
+GET {{baseURL}}/trayectos
+Content-Type: application/json
+
+###obtener un trayecto en especifico
+GET {{baseURL}}/trayectos/Manizales&Medellin
+Content-Type: application/json
+
+### agregar nuevo trayecto
+POST {{baseURL}}/trayectos
+Content-Type: application/json
+
+{
+  "origen": "Pasto",
+  "destino": "Leticia",
+  "costo": 200000,
+  "duration": "PT50M"
+}
+
+
+//Vuelos
+###obtener todos los vuelos
+GET {{baseURL}}/vuelos
+Content-Type: application/json
+
+###obtener vuelo en especifico
+GET {{baseURL}}/vuelos/fechaHora=2022-11-16T11:42:42.740799&origen=Manizales&destino=Medellin&avion=sl-78954
+Content-Type: application/json
+
+### crear un vuelo
+POST {{baseURL}}/vuelos
+Content-Type: application/json
+
+{
+    "fechaHora": "2022-10-25T22:19:25.151863",
+    "origen": "Pasto",
+    "destino": "Leticia",
+    "avion": "HK2009"
+}
+
+

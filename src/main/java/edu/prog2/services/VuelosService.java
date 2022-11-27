@@ -54,6 +54,21 @@ public class VuelosService {
     return ok;
   }
 
+  public void add(JSONObject json) throws IOException {
+    LocalDateTime fechaHora = LocalDateTime.parse(
+        json.getString("fechaHora"));
+
+    Trayecto trayecto = new Trayecto(
+        json.getString("origen"),
+        json.getString("destino"),
+        Duration.ZERO, 0.0);
+
+    trayecto = trayectos.get(trayecto);
+    Avion avion = aviones.get(new Avion(json.getString("avion"), ""));
+
+    add(new Vuelo(fechaHora, trayecto, avion));
+  }
+
   public Vuelo get(int index) {
     return vuelos.get(index);
   }

@@ -16,5 +16,14 @@
     },
     "cancelada": false,
     "fechaHora": "2022-11-17T22:15:51.558426"
+  },
+  {
+    "pasajero": {
+      "apellidos": "Mabesoy Torres",
+      "identificacion": "P001",
+      "nombres": "Ana Maria"
+    },
+    "cancelada": false,
+    "fechaHora": "2022-10-27T06:33:35.449360"
   }
 ]

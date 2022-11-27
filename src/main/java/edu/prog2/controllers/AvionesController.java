@@ -5,6 +5,7 @@ import static spark.Spark.*;
 import org.json.JSONObject;
 
 import edu.prog2.helpers.StandardResponse;
+import edu.prog2.models.Avion;
 import edu.prog2.services.AvionesService;
 
 public class AvionesController {
@@ -13,26 +14,32 @@ public class AvionesController {
     path("/aviones", () -> {
 
       get("", (req, res) -> {
-
-        res.type("application/json");
         try {
-          res.status(201);
-          return new StandardResponse(200, "ok", avionesService.getJSON());
+          return new StandardResponse(res, 200, "ok", avionesService.getJSON());
         } catch (Exception exception) {
-          return new StandardResponse(404, exception);
+          return new StandardResponse(res, 404, exception);
         }
       });
 
       get("/:matricula", (req, res) -> {
-        res.type("application/json");
         try {
-          res.status(201);
           String matricula = req.params(":matricula");
           JSONObject json = avionesService.get(matricula);
-          return new StandardResponse(201, "ok", json);
+          return new StandardResponse(res, 201, "ok", json);
         } catch (Exception exception) {
-          return new StandardResponse(404, exception);
+          return new StandardResponse(res, 404, exception);
         }
+      });
+
+      post("", (req, res) -> {
+        try {
+          Avion avion = new Avion(new JSONObject(req.body()));
+          avionesService.add(avion);
+          return new StandardResponse(res, 201, "ok");
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
+        }
+
       });
     });
   }

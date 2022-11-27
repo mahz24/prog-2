@@ -14,24 +14,31 @@ public class ReservasController {
     path("/reservas", () -> {
 
       get("", (req, res) -> {
-        res.type("application/json");
         try {
-          res.status(201);
-          return new StandardResponse(201, "ok", reservasService.getJSON());
+          return new StandardResponse(res, 201, "ok", reservasService.getJSON());
         } catch (Exception exception) {
-          return new StandardResponse(404, exception);
+          return new StandardResponse(res, 404, exception);
         }
       });
 
       get("/:reserva", (req, res) -> {
-        res.type("application/json");
         try {
-          res.status(201);
           String params = req.params(":reserva");
           JSONObject json = reservasService.get(params);
-          return new StandardResponse(201, "ok", json);
+          return new StandardResponse(res, 201, "ok", json);
         } catch (Exception exception) {
-          return new StandardResponse(404, exception);
+          return new StandardResponse(res, 404, exception);
+        }
+      });
+
+      post("", (req, res) -> {
+        try {
+          JSONObject json = new JSONObject(req.body());
+          reservasService.add(json);
+          return new StandardResponse(res, 201, "ok");
+
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
         }
       });
 

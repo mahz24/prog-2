@@ -57,6 +57,12 @@ public class ReservasService {
     return reservas.get(index);
   }
 
+  public void add(JSONObject json) throws IOException {
+    LocalDateTime fechaHora = LocalDateTime.parse(json.getString("fechaHora"));
+    Pasajero pasajero = pasajeros.get(new Pasajero(json.getString("pasajero"), null, null));
+    this.add(new Reserva(fechaHora, false, pasajero));
+  }
+
   /**
    * Este metodo busca una reserva en el arraylist y la devuelve
    * 

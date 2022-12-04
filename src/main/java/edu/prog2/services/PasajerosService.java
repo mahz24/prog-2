@@ -112,6 +112,20 @@ public class PasajerosService {
     return new JSONObject(pasajero);
   }
 
+  public void remove(String identificacion) throws Exception {
+    Pasajero pasajero = this.get(new Pasajero(identificacion, "", ""));
+    if (UtilFiles.exists(UtilFiles.FILE_PATH + "reservas", "pasajero", pasajero)) {
+      throw new Exception(String.format(
+          "No se eliminó el pasajero %s, porque tiene reservas", identificacion));
+    }
+    if (!pasajeros.remove(pasajero)) {
+      throw new Exception(String.format(
+          "No se encontró el pasajero con identificación %s", identificacion));
+    }
+
+    UtilFiles.writeData(pasajeros, fileName);
+  }
+
   /**
    * Este metodo sube un archivo de datos de tipo csv a la carpeta data en la raiz
    * 

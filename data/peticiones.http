@@ -1,25 +1,25 @@
 @baseURL=http://localhost:4567
 
-//Pasajeros
-###obtener pasajeros
+//----------------------PASAJEROS--------------------------
+### Obtener la información de todos los pasajeros
 GET {{baseURL}}/pasajeros
 Content-Type: application/json
 
-###obtener pasajero en especifico
+### Obtener la información de un pasajero en específico
 GET {{baseURL}}/pasajeros/p001
 Content-Type: application/json
 
-### agregar un pasajero
+### Registrar un pasajero 
 POST {{baseURL}}/pasajeros
 Content-Type: application/json
  
 {
-    "identificacion" : "P002",
-    "nombres": "Camila",
-    "apellidos" : "Centenar"
+    "identificacion" : "P003",
+    "nombres": "marco",
+    "apellidos" : "zuñiga"
 }
 
-###Actualizar los datos de un pasajero
+### Actualizar la  de un pasajero
 PUT {{baseURL}}/pasajeros/p001
 Content-Type: application/json
 
@@ -31,59 +31,68 @@ Content-Type: application/json
 
 }
 
+### Eliminar el registro de un pasajero
+DELETE {{baseURL}}/pasajeros/P002
+Content-Type: application/json 
 
-//Trayectos
-###obtener todos los trayectos
+
+//----------------------TRAYECTOS--------------------------
+
+### Obtener la información de todos los trayectos
 GET {{baseURL}}/trayectos
 Content-Type: application/json
 
-###obtener un trayecto en especifico
+### Obtener la información de un trayecto en específico
 GET {{baseURL}}/trayectos/medellin&manizales
 Content-Type: application/json
 
-### agregar nuevo trayecto
+### Registrar un nuevo trayecto
 POST {{baseURL}}/trayectos
 Content-Type: application/json
 
 {
-  "origen": "Cartagena",
-  "destino": "Leticia",
+  "origen": "Cancun",
+  "destino": "Bogota",
   "costo": 100000,
   "duration": "PT60M"
 }
 
-###Actualizar los datos de un trayecto
+### Actualizar la información de un trayecto
 PUT {{baseURL}}/trayectos/medellin&manizales
 Content-Type: application/json
 
 {
-  "origen": "Cali",
-  "destino": "Bucaramanga",
+  "origen": "Santa Marta",
+  "destino": "Sienaga de Oro",
   "costo": 100000,
   "duracion": "PT1H30M"
 }
 
+### Eliminar el registro de un trayecto
+DELETE {{baseURL}}/trayectos/Cancun&Bogota
+Content-Type: application/json
 
 
-// Aviones
-###  obtener los aviones
+//----------------------AVIONES--------------------------
+
+### Obtener la información de todos los aviones
 GET {{baseURL}}/aviones
 content-type: application/json
 
-### obtener avion en especifico
+### Obtener la información avión en especifico
 GET {{baseURL}}/aviones/hk2003
 content-type: application/json
 
-### añadir avion 
+### Registrar los datos de un avión
 POST {{baseURL}}/aviones
 content-type: application/json
 
 { 
-  "matricula": "HK20010", 
-  "modelo": "Airbus A321XLR2"
+  "matricula": "HK2001", 
+  "modelo": "Airbus A321XLR"
 }
 
-### actualizar avion
+### Actualizar la información de un avión
 PUT {{baseURL}}/aviones/hk2003
 content-type: application/json
 
@@ -92,17 +101,22 @@ content-type: application/json
   "modelo": "Airbus Airbus 330-1"
 }
 
+### Eliminaar el registro de un avión
+DELETE {{baseURL}}/aviones/HK2001
+Content-Type: application/json
 
-// Sillas
-### obtener todos las sillas
+
+//----------------------SILLAS--------------------------
+
+### Obtener la información de todas las sillas
 GET {{baseURL}}/sillas
 Content-Type: application/json
 
-###obtener una silla en especifico
+### Obtener la información de una silla específica
 GET {{baseURL}}/sillas/1&A&HK20010
 Content-Type: application/json
 
-### asignarle sillas a un avión
+### Asignarle sillas a un avión
 POST {{baseURL}}/sillas
 Content-Type: application/json
 
@@ -112,40 +126,46 @@ Content-Type: application/json
   "economicas": 30
 }
 
-### Actualizar los datos de una silla
+### Actualizar la información de una silla
 PUT {{baseURL}}/sillas/1&A&HK2005
 Content-Type: application/json
 
 {
-    "avion": "HK20010",
+    "avion": "HK2005",
     "fila": 1,
     "columna": "A",
     "disponible": true,
-    
+    "menu": "VEGETARIANO",
+    "licor": "NINGUNO"
 }
 
+### Eliminar el registro una silla
+DELETE {{baseURL}}/sillas/1&A&HK2005
+Content-Type: application/json
 
-//Vuelos
-###obtener todos los vuelos
+
+//----------------------VUELOS--------------------------
+
+### Obtener la información de todos los vuelos
 GET {{baseURL}}/vuelos
 Content-Type: application/json
 
-###obtener vuelo en especifico
-GET {{baseURL}}/vuelos/fechaHora=2022-11-16T11:42:42.740799&origen=Cali&destino=Bucaramanga&avion=HK20010
+### Obtener la iformación de un vuelo en especifico
+GET {{baseURL}}/vuelos/2022-10-25T22:19:25.151863&Cali&Bucaramanga&HK20010
 Content-Type: application/json
 
-### crear un vuelo
+### Registrar un vuelo
 POST {{baseURL}}/vuelos
 Content-Type: application/json
 
 {
     "fechaHora": "2022-11-16T11:42:42.74079",
-    "origen": "Cali",
-    "destino": "Bucaramanga",
+    "origen": "Cartagena",
+    "destino": "Leticia",
     "avion": "HK20010"
 }
 
-### Actualizar los datos de un vuelo
+### Actualizar la información de un vuelo
 PUT {{baseURL}}/vuelos/2022-10-25T22:19:25.151863&Cali&Bucaramanga&HK20010
 Content-Type: application/json
 
@@ -157,17 +177,21 @@ Content-Type: application/json
     "cancelado": false
 }
 
+### Eliminar el registro de un vuelo
+DELETE {{baseURL}}/vuelos/2022-11-16T11:42:42.740790&Cartagena&Leticia&HK20010
+Content-Type: application/json
 
-//Reservas
-###obtener todos las reservas
+//----------------------RESERVAS--------------------------
+
+### Obtener la información de todos las reservas
 GET {{baseURL}}/reservas
 Content-Type: application/json
 
-###obtener una reserva especifica
-GET {{baseURL}}/reservas/2022-11-28T06:33:35.449360&P0022
+### Obtener la información de una reserva específica
+GET {{baseURL}}/reservas/2022-10-28T06:33&P002
 Content-Type: application/json
 
-### Crear una reserva
+### Registrar una reserva
 POST {{baseURL}}/reservas
 Content-Type: application/json
 
@@ -176,8 +200,8 @@ Content-Type: application/json
     "pasajero": "P0022"
 }
 
-### Actualizar los datos de una reserva
-PUT {{baseURL}}/reservas/2022-11-28T06:33:35.449360&P0022
+### Actualizar la información de una reserva
+PUT {{baseURL}}/reservas/2022-10-28T06:33&P002
 Content-Type: application/json
 
 {
@@ -186,18 +210,22 @@ Content-Type: application/json
     "cancelada": false
 }
 
+### Eliminar el registro de una reserva
+DELETE {{baseURL}}/reservas/2022-10-28T06:33&P002
+Content-Type: application/json
 
 
-//Reservas en vuelo
-###obtener todas las reservas en vuelo
+//----------------------VUELOS RESERVADOS--------------------------
+
+### Obtener la imformacion de los vuelos reservados
 GET {{baseURL}}/vuelos-reservas
 Content-Type: application/json
 
-###obtener una reserva en vuelo en especifico
+### Obtener la información de un vuelo reservado
 GET {{baseURL}}/vuelos-reservas/2022-10-28T06:33&P002&2022-10-25T22:19:25.151863&Cali&Bucaramanga&HK20010&5&A
 Content-Type: application/json
 
-### Crear una nueva reserva en vuelo
+### Crear un registro de un vuelo reservado
 POST {{baseURL}}/vuelos-reservas
 Content-Type: application/json
 
@@ -212,7 +240,7 @@ Content-Type: application/json
     "columna": "A"
 }
 
-###Actualizar una reserva en vuelo
+### Actualizar la información de un vuelo reservado
 PUT {{baseURL}}/vuelos-reservas/2022-10-28T06:33&P002&2022-10-25T22:19:25.151863&Cali&Bucaramanga&HK20010&5&A
 Content-Type: application/json
 
@@ -225,6 +253,9 @@ Content-Type: application/json
     "columna": "A"
 }
 
+### Eliminar el registro de un vuelo reservado
+DELETE {{baseURL}}/vuelos-reservas/2022-10-28T06:33&P002&2022-10-25T22:19:25.151863&Cali&Bucaramanga&HK20010&5&A
+Content-Type: application/json
 
 
 

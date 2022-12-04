@@ -48,6 +48,16 @@ public class SillasController {
           return new StandardResponse(res, 404, exception);
         }
       });
+
+      delete("/:silla", (req, res) -> {
+        try {
+          String params = req.params(":silla");
+          sillasService.remove(params);
+          return new StandardResponse(res, 201, "ok");
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
+        }
+      });
     });
   }
 }

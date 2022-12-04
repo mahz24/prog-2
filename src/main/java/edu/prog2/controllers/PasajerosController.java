@@ -54,6 +54,16 @@ public class PasajerosController {
         }
       });
 
+      delete("/:id", (req, res) -> {
+        try {
+          String id = req.params(":id");
+          pasajerosService.remove(id);
+          return new StandardResponse(res, 201, "ok");
+        } catch (Exception e) {
+          return new StandardResponse(res, 404, e);
+        }
+      });
+
     });
 
   }

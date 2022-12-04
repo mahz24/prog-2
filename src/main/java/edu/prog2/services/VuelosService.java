@@ -164,6 +164,28 @@ public class VuelosService {
     UtilFiles.writeJSON(vuelos, fileName + ".json");
   }
 
+  public void remove(String params) throws Exception {
+    String[] parts = params.split("&");
+    Avion avion = aviones.get(new Avion(parts[3], null));
+    Trayecto trayecto = trayectos.get(
+        new Trayecto(
+            parts[1], parts[2], Duration.ZERO, 0.0));
+    LocalDateTime fechaHora = LocalDateTime.parse(parts[0]);
+
+    Vuelo vuelo = this.get(new Vuelo(fechaHora, trayecto, avion));
+
+    if (UtilFiles.exists(UtilFiles.FILE_PATH + "vuelos-reservas", "vuelo", vuelo)) {
+      throw new Exception(String.format(
+          "No se eliminó el vuelo reservado, porque el vuelo %s existe", vuelo));
+    }
+
+    if (!vuelos.remove(vuelo)) {
+      throw new Exception("No se encontró el vuelo");
+    }
+
+    UtilFiles.writeData(vuelos, fileName);
+  }
+
   /**
    * Este metodo sube un archivo de datos de tipo csv a la carpeta data en la raiz
    * 

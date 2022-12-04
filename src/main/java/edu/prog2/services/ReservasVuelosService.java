@@ -27,9 +27,6 @@ public class ReservasVuelosService {
   private PasajerosService pasajeros;
   private TrayectosService trayectos;
   private String fileName;
-  private Reserva r;
-  private Vuelo v;
-  private Silla s;
 
   /**
    * Constructor principal del controlador de las reservas en vuelo
@@ -44,7 +41,7 @@ public class ReservasVuelosService {
     this.pasajeros = pasajeros;
     this.aviones = aviones;
     this.trayectos = trayectos;
-    fileName = UtilFiles.FILE_PATH + "vuelos-de-reservas";
+    fileName = UtilFiles.FILE_PATH + "vuelos-reservas";
 
     if (UtilFiles.fileExists(fileName + ".csv")) {
       loadCSV();
@@ -190,6 +187,42 @@ public class ReservasVuelosService {
     return new JSONObject(reservaVueloSearched);
   }
 
+  public void remove(String params) throws Exception {
+    String[] parts = params.split("&");
+    // encontrar los datos de la reserva en vuelo
+    Pasajero pasajero = this.pasajeros.get(new Pasajero(parts[1], null, null));
+    Reserva reserva = this.reservas.get(new Reserva(LocalDateTime.parse(parts[0]), null, pasajero));
+    Avion avion = this.aviones.get(new Avion(parts[5], null));
+    Trayecto trayecto = this.trayectos.get(new Trayecto(parts[3], parts[4],
+        Duration.ZERO, 0));
+    Silla silla = this.sillas.get(new Silla(Integer.parseInt(parts[6]),
+        parts[7].charAt(0), avion));
+    Vuelo vuelo = this.vuelos.get(new Vuelo(LocalDateTime.parse(parts[2]),
+        trayecto, avion));
+    ReservaVuelo reservaVuelo = this.get(new ReservaVuelo(reserva, vuelo,
+        silla));
+
+    if (UtilFiles.exists(UtilFiles.FILE_PATH + "vuelos-reservas", "reserva", reserva)) {
+      throw new Exception(String.format(
+          "No se eliminó el vuelo reservado, porque la reserva %s existe", reserva));
+    }
+
+    if (UtilFiles.exists(UtilFiles.FILE_PATH + "vuelos-reservas", "vuelo", vuelo)) {
+      throw new Exception(String.format(
+          "No se eliminó el vuelo reservado, porque el vuelo %s existe", vuelo));
+    }
+
+    if (UtilFiles.exists(UtilFiles.FILE_PATH + "vuelos-reservas", "silla", silla)) {
+      throw new Exception(String.format(
+          "No se eliminó el vuelo reservado, porque la silla %s existe", silla));
+    }
+
+    if (!reservasVuelos.remove(reservaVuelo)) {
+      throw new Exception("No se encontró el vuelo reservado");
+    }
+
+  }
+
   /**
    * Este metodo sube un archivo de datos de tipo csv a la carpeta data en la raiz
    * 
@@ -201,8 +234,9 @@ public class ReservasVuelosService {
 
     try (Scanner sc = new Scanner(text).useDelimiter(";|[\n]+|[\r\n]+")) {
       while (sc.hasNext()) {
-        LocalDateTime fechaHora = LocalDateTime.parse(sc.next());
+        LocalDateTime fechaHoraReserva = LocalDateTime.parse(sc.next());
         String identificacion = sc.next();
+        LocalDateTime fechaHoraVuelo = LocalDateTime.parse(sc.next());
         String origen = sc.next();
         String destino = sc.next();
         String matircula = sc.next();
@@ -210,25 +244,14 @@ public class ReservasVuelosService {
         char columna = sc.next().charAt(0);
         Boolean disponible = sc.nextBoolean();
 
-        for (Reserva reserva : reservas.getList()) {
-          if (reserva.getFechaHora().equals(fechaHora)
-              && reserva.getPasajero().getIdentificacion().equals(identificacion)) {
-            r = new Reserva(reserva);
-          }
-        }
-        for (Vuelo vuelo : vuelos.getList()) {
-          if (vuelo.getTrayecto().getDestino().equals(destino) && vuelo.getTrayecto().getOrigen().equals(origen)
-              && vuelo.getAvion().getMatricula().equals(matircula)) {
-            v = new Vuelo(vuelo);
-          }
-        }
-        for (Silla silla : sillas.getList()) {
-          if (silla.getFila() == fila && silla.getColumna() == columna && silla.getDisponible().equals(disponible)) {
-            s = new Silla(silla);
-          }
-        }
+        Pasajero pasajero = pasajeros.get(new Pasajero(identificacion, null, null));
+        Reserva reserva = reservas.get(new Reserva(fechaHoraReserva, disponible, pasajero));
+        Trayecto trayecto = trayectos.get(new Trayecto(origen, destino, Duration.ZERO, 0));
+        Avion avion = aviones.get(new Avion(matircula, null));
+        Vuelo vuelo = vuelos.get(new Vuelo(fechaHoraVuelo, trayecto, avion));
+        Silla silla = sillas.get(new Silla(fila, columna, avion));
 
-        reservasVuelos.add(new ReservaVuelo(r, v, s));
+        reservasVuelos.add(new ReservaVuelo(reserva, vuelo, silla));
       }
     }
   }

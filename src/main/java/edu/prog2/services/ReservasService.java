@@ -135,6 +135,27 @@ public class ReservasService {
     return new JSONObject(reserva);
   }
 
+  public void remove(String params) throws Exception {
+    String[] parts = params.split("&");
+    Pasajero pasajero = pasajeros.get(new Pasajero(parts[1], null, null));
+    Reserva reserva = this.get(new Reserva(LocalDateTime.parse(parts[0]), null, pasajero));
+
+    if (UtilFiles.exists(UtilFiles.FILE_PATH + "reservas", "pasajero", pasajero)) {
+      throw new Exception(String.format(
+          "No se eliminó la reserva , porque el pasajero %s existe", reserva.getPasajero().getIdentificacion()));
+    }
+
+    if (UtilFiles.exists(UtilFiles.FILE_PATH + "vuelos-reservas", "reserva", reserva)) {
+      throw new Exception(String.format(
+          "No se eliminó la reserva %s, porque se esta utilizando en vuelos reservados",
+          reserva));
+    }
+
+    if (!reservas.remove(reserva)) {
+      throw new Exception("No se encotró la reserva");
+    }
+  }
+
   /**
    * Este metodo sube un archivo de datos de tipo csv a la carpeta data en la raiz
    * 

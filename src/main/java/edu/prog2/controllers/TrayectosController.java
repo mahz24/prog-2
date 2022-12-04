@@ -53,6 +53,16 @@ public class TrayectosController {
         }
       });
 
+      delete("/:trayecto", (req, res) -> {
+        try {
+          String params = req.params(":trayecto");
+          trayectosService.remove(params);
+          return new StandardResponse(res, 201, "ok");
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
+        }
+      });
+
     });
 
   }

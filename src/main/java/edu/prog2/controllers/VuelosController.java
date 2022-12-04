@@ -25,7 +25,7 @@ public class VuelosController {
       get("/:vuelo", (req, res) -> {
         try {
           String params = req.params(":vuelo");
-          JSONObject json = vuelosService.get(params);
+          JSONObject json = vuelosService.getVuelo(params);
           return new StandardResponse(res, 201, "ok", json);
         } catch (Exception exception) {
           return new StandardResponse(res, 404, exception);
@@ -56,6 +56,15 @@ public class VuelosController {
         try {
           JSONObject json = new JSONObject(req.body());
           vuelosService.set(json, req.params(":vuelo"));
+          return new StandardResponse(res, 201, "ok");
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
+        }
+      });
+
+      delete("/:vuelo", (req, res) -> {
+        try {
+          vuelosService.remove(req.params(":vuelo"));
           return new StandardResponse(res, 201, "ok");
         } catch (Exception exception) {
           return new StandardResponse(res, 404, exception);

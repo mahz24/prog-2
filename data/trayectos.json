@@ -6,15 +6,15 @@
     "destino": "Bucaramanga"
   },
   {
-    "duration": "PT50M",
-    "costo": 200000,
-    "origen": "Pasto",
+    "duration": "PT1H",
+    "costo": 100000,
+    "origen": "Cartagena",
     "destino": "Leticia"
   },
   {
     "duration": "PT1H",
     "costo": 100000,
-    "origen": "Cartagena",
-    "destino": "Leticia"
+    "origen": "Sienaga de Oro",
+    "destino": "Santa Marta"
   }
 ]

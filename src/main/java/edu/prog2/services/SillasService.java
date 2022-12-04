@@ -122,10 +122,10 @@ public class SillasService {
         ejecutiva.setColumna(json.getString("columna").charAt(0));
         ejecutiva.setDisponible(json.getBoolean("disponible"));
         ejecutiva.setFila(json.getInt("fila"));
-        ejecutiva.setMenu(json.getEnum(Menu.class, json.getString("menu")));
-        ejecutiva.setLicor(json.getEnum(Licor.class, json.getString("licor")));
+        ejecutiva.setMenu(Menu.valueOf(json.getString("menu")));
+        ejecutiva.setLicor(Licor.valueOf(json.getString("licor")));
         sillas.set(index, ejecutiva);
-        UtilFiles.writeCSV(sillas, fileName);
+        UtilFiles.writeData(sillas, fileName);
         return new JSONObject(ejecutiva);
       }
     }
@@ -137,6 +137,27 @@ public class SillasService {
     UtilFiles.writeData(sillas, fileName);
     return new JSONObject(silla);
 
+  }
+
+  public void remove(String params) throws Exception {
+    String[] parts = params.split("&");
+    Avion avion = aviones.get(new Avion(parts[2], null));
+    Silla silla = this.get(new Silla(Integer.parseInt(parts[0]), parts[1].charAt(0), avion));
+
+    if (UtilFiles.exists(UtilFiles.FILE_PATH + "sillas", "avion", avion)) {
+      throw new Exception(String.format(
+          "No se eliminó la silla, porque está asignada en el avión %s", silla.getAvion().getMatricula()));
+    }
+
+    if (UtilFiles.exists(UtilFiles.FILE_PATH + "vuelos-reservas", "silla", silla)) {
+      throw new Exception(String.format(
+          "No se eliminó la silla %s, porque está en un vuelo reservado", silla));
+    }
+
+    if (!sillas.remove(silla)) {
+      throw new Exception("No se encotró la silla");
+    }
+    UtilFiles.writeData(sillas, fileName);
   }
 
   /**

@@ -52,6 +52,16 @@ public class ReservasVuelosController {
         }
       });
 
+      delete("/:vuelo-reserva", (req, res) -> {
+        try {
+          String params = req.params(":vuelo-reserva");
+          reservasVuelosService.remove(params);
+          return new StandardResponse(res, 201, "ok");
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
+        }
+      });
+
     });
   }
 }

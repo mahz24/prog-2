@@ -8,6 +8,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.util.List;
 import java.io.StringReader;
+import java.lang.reflect.Constructor;
 import java.util.Properties;
 import org.json.Property;
 import org.json.JSONObject;
@@ -97,5 +98,20 @@ public class UtilFiles {
     Properties properties = new Properties();
     properties.load(reader);
     return Property.toJSONObject(properties);
+  }
+
+  public static boolean exists(String fileName, String key, Object search) throws Exception {
+    Constructor<?> constructor = search.getClass().getConstructor(JSONObject.class);
+    String data = UtilFiles.readText(fileName + ".json");
+    JSONArray jsonArrayData = new JSONArray(data);
+
+    for (int i = 0; i < jsonArrayData.length(); i++) {
+      JSONObject jsonObj = jsonArrayData.getJSONObject(i);
+      Object current = constructor.newInstance(jsonObj.getJSONObject(key));
+      if (current.equals(search)) {
+        return true;
+      }
+    }
+    return false;
   }
 }

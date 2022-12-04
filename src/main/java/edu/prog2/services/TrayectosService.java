@@ -115,6 +115,22 @@ public class TrayectosService {
     return new JSONObject(trayecto);
   }
 
+  public void remove(String params) throws Exception {
+    String[] parts = params.split("&");
+    Trayecto trayecto = this.get(new Trayecto(parts[0], parts[1], Duration.ZERO, 0.0));
+
+    if (UtilFiles.exists(UtilFiles.FILE_PATH + "vuelos", "trayecto", trayecto)) {
+      throw new Exception(String.format(
+          "No se eliminó el trayecto %s, está en vuelos", trayecto));
+    }
+
+    if (!trayectos.remove(trayecto)) {
+      throw new Exception(String.format("No se encontró el trayecto %s", trayecto));
+    }
+
+    UtilFiles.writeData(trayectos, fileName);
+  }
+
   /**
    * Este metodo añade los datos del trayecto al archivo .csv en la carpeta data
    * 

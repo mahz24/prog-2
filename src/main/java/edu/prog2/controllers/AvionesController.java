@@ -51,6 +51,15 @@ public class AvionesController {
           return new StandardResponse(res, 404, exception);
         }
       });
+
+      delete("/:matricula", (req, res) -> {
+        try {
+          avionesService.remove(req.params(":matricula"));
+          return new StandardResponse(res, 201, "ok");
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
+        }
+      });
     });
   }
 

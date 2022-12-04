@@ -110,6 +110,24 @@ public class AvionesService {
     return new JSONObject(avion);
   }
 
+  public void remove(String matricula) throws Exception {
+    Avion avion = this.get(new Avion(matricula, null));
+
+    if (UtilFiles.exists(UtilFiles.FILE_PATH + "sillas", "avion", avion)) {
+      throw new Exception(String.format("No se elimino el avion %s, porque tiene sillas", avion.getMatricula()));
+    }
+
+    if (UtilFiles.exists(UtilFiles.FILE_PATH + "vuelos", "avion", avion)) {
+      throw new Exception(String.format("No se elimino el avion %s, porque esta en vuelos", avion.getMatricula()));
+    }
+
+    if (!aviones.remove(avion)) {
+      throw new Exception(String.format("No se encontro el avion %s", avion.getMatricula()));
+    }
+
+    UtilFiles.writeData(aviones, fileName);
+  }
+
   /**
    * Este metodo sube un archivo de datos de tipo csv a la carpeta data en la raiz
    * 

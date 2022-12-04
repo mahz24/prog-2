@@ -1,58 +1,14 @@
-[
-  {
-    "dateTime": "2022-11-16T11:42:42.740799",
-    "trayecto": {
-      "duration": "PT30M",
-      "costo": 100,
-      "origen": "Manizales",
-      "destino": "Medellin"
-    },
-    "cancelado": false,
-    "avion": {
-      "matricula": "sl-78954",
-      "modelo": "CARIÑOSO"
-    }
+[{
+  "dateTime": "2022-10-25T22:19:25.151863",
+  "trayecto": {
+    "duration": "PT1H30M",
+    "costo": 100000,
+    "origen": "Cali",
+    "destino": "Bucaramanga"
   },
-  {
-    "dateTime": "2022-11-16T11:43:05.076357",
-    "trayecto": {
-      "duration": "PT2H",
-      "costo": 4000,
-      "origen": "Bogota",
-      "destino": "Cancun"
-    },
-    "cancelado": false,
-    "avion": {
-      "matricula": "sl-78954",
-      "modelo": "CARIÑOSO"
-    }
-  },
-  {
-    "dateTime": "2022-11-16T11:43:43.425209",
-    "trayecto": {
-      "duration": "PT2H",
-      "costo": 4000,
-      "origen": "Cancun",
-      "destino": "Bogota"
-    },
-    "cancelado": false,
-    "avion": {
-      "matricula": "sl-78954",
-      "modelo": "CARIÑOSO"
-    }
-  },
-  {
-    "dateTime": "2022-10-25T22:19:25.151863",
-    "trayecto": {
-      "duration": "PT50M",
-      "costo": 200000,
-      "origen": "Pasto",
-      "destino": "Leticia"
-    },
-    "cancelado": false,
-    "avion": {
-      "matricula": "HK2009",
-      "modelo": "Airbus A321XLR2"
-    }
+  "cancelado": false,
+  "avion": {
+    "matricula": "HK20010",
+    "modelo": "Airbus A321XLR2"
   }
-]
+}]

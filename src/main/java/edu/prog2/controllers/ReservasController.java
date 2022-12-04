@@ -36,7 +36,16 @@ public class ReservasController {
           JSONObject json = new JSONObject(req.body());
           reservasService.add(json);
           return new StandardResponse(res, 201, "ok");
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
+        }
+      });
 
+      put("/:reserva", (req, res) -> {
+        try {
+          JSONObject json = new JSONObject(req.body());
+          reservasService.set(json, req.params("reserva"));
+          return new StandardResponse(res, 201, "ok");
         } catch (Exception exception) {
           return new StandardResponse(res, 404, exception);
         }

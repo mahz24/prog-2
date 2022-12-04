@@ -145,8 +145,33 @@ public class ReservaVuelo implements IFormatCSV {
 
   @Override
   public String toCSV() {
-    return String.format("%s;%s;%s;%s;%s;%s;%s;%s%n", reserva.getFechaHora(), reserva.getPasajero().getIdentificacion(),
-        vuelo.getTrayecto().getOrigen(), vuelo.getTrayecto().getDestino(), vuelo.getAvion().getMatricula(),
-        silla.getFila(), silla.getColumna(), silla.getDisponible());
+    // fechaHora;identificacion;vueloFechaHora;destino;origen;matricula;fila;columna;checkIn;menu;licor
+    if (this.silla instanceof SillaEjecutiva) {
+      SillaEjecutiva s = (SillaEjecutiva) this.silla;
+      return String.format(
+          "%s;%s;%s;%s;%s;%s;%d;%s;%s;%s;%s%n",
+          this.reserva.getFechaHora(),
+          this.reserva.getPasajero().getIdentificacion(),
+          this.vuelo.getDateTime(),
+          this.vuelo.getTrayecto().getOrigen(),
+          this.vuelo.getTrayecto().getDestino(),
+          this.vuelo.getAvion().getMatricula(),
+          this.silla.getFila(),
+          this.silla.getColumna(),
+          this.checkIn,
+          s.getMenu(),
+          s.getLicor());
+    }
+    return String.format(
+        "%s;%s;%s;%s;%s;%s;%d;%s;%s%n",
+        this.reserva.getFechaHora(),
+        this.reserva.getPasajero().getIdentificacion(),
+        this.vuelo.getDateTime(),
+        this.vuelo.getTrayecto().getOrigen(),
+        this.vuelo.getTrayecto().getDestino(),
+        this.vuelo.getAvion().getMatricula(),
+        this.silla.getFila(),
+        this.silla.getColumna(),
+        this.checkIn);
   }
 }

@@ -1,29 +1,9 @@
-[
-  {
-    "pasajero": {
-      "apellidos": "Mabesoy Torres",
-      "identificacion": "P001",
-      "nombres": "Ana Maria"
-    },
-    "cancelada": false,
-    "fechaHora": "2022-11-17T22:14:56.301969"
+[{
+  "pasajero": {
+    "apellidos": "Centenar",
+    "identificacion": "P002",
+    "nombres": "Camila"
   },
-  {
-    "pasajero": {
-      "apellidos": "Garzon Hurtado",
-      "identificacion": "P006",
-      "nombres": "Carolina"
-    },
-    "cancelada": false,
-    "fechaHora": "2022-11-17T22:15:51.558426"
-  },
-  {
-    "pasajero": {
-      "apellidos": "Mabesoy Torres",
-      "identificacion": "P001",
-      "nombres": "Ana Maria"
-    },
-    "cancelada": false,
-    "fechaHora": "2022-10-27T06:33:35.449360"
-  }
-]
+  "cancelada": false,
+  "fechaHora": "2022-10-28T06:33"
+}]

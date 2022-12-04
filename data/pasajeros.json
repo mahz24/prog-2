@@ -1,47 +1,17 @@
 [
   {
-    "apellidos": "Mabesoy Torres",
-    "identificacion": "P001",
-    "nombres": "Ana Maria"
-  },
-  {
-    "apellidos": "Zuñiga Morelo",
-    "identificacion": "P002",
-    "nombres": "Dennis Rosa"
-  },
-  {
-    "apellidos": "Ciceros Cardona",
-    "identificacion": "P003",
-    "nombres": "Camilo Andres"
-  },
-  {
-    "apellidos": "Salazar Cordoba",
-    "identificacion": "P004",
-    "nombres": "Daniel Andres"
-  },
-  {
-    "apellidos": "Bedoya Arcila",
-    "identificacion": "P005",
-    "nombres": "Santiago"
-  },
-  {
-    "apellidos": "Garzon Hurtado",
-    "identificacion": "P006",
-    "nombres": "Carolina"
-  },
-  {
-    "apellidos": "Yourcenar",
-    "identificacion": "P0020",
-    "nombres": "Marguerite"
-  },
-  {
-    "apellidos": "Yourcenar",
-    "identificacion": "P0021",
-    "nombres": "Marguerite"
+    "apellidos": "Centenar",
+    "identificacion": "p001",
+    "nombres": "Camil"
   },
   {
     "apellidos": "Yourcenar",
     "identificacion": "P0022",
     "nombres": "Yuliet"
+  },
+  {
+    "apellidos": "Centenar",
+    "identificacion": "P002",
+    "nombres": "Camila"
   }
 ]

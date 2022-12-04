@@ -1,113 +1,37 @@
-[
-  {
-    "checkIn": false,
-    "vuelo": {
-      "dateTime": "2022-11-16T11:42:42.740799",
-      "trayecto": {
-        "duration": "PT30M",
-        "costo": 100,
-        "origen": "Manizales",
-        "destino": "Medellin"
-      },
-      "cancelado": false,
-      "avion": {
-        "matricula": "sl-78954",
-        "modelo": "CARIÑOSO"
-      }
+[{
+  "checkIn": false,
+  "reserva": {
+    "pasajero": {
+      "apellidos": "Centenar",
+      "identificacion": "P002",
+      "nombres": "Camila"
     },
-    "reserva": {
-      "pasajero": {
-        "apellidos": "Mabesoy Torres",
-        "identificacion": "P001",
-        "nombres": "Ana Maria"
-      },
-      "cancelada": false,
-      "fechaHora": "2022-11-17T22:14:56.301969"
+    "cancelada": false,
+    "fechaHora": "2022-10-28T06:33"
+  },
+  "vuelo": {
+    "dateTime": "2022-10-25T22:19:25.151863",
+    "trayecto": {
+      "duration": "PT1H30M",
+      "costo": 100000,
+      "origen": "Cali",
+      "destino": "Bucaramanga"
     },
-    "silla": {
-      "columna": "B",
-      "posicion": "09B",
-      "ubicacion": "CENTRO",
-      "fila": 9,
-      "avion": {
-        "matricula": "HK2009",
-        "modelo": "Airbus A321XLR2"
-      },
-      "disponible": true
+    "cancelado": false,
+    "avion": {
+      "matricula": "HK20010",
+      "modelo": "Airbus A321XLR2"
     }
   },
-  {
-    "checkIn": false,
-    "vuelo": {
-      "dateTime": "2022-11-16T11:42:42.740799",
-      "trayecto": {
-        "duration": "PT30M",
-        "costo": 100,
-        "origen": "Manizales",
-        "destino": "Medellin"
-      },
-      "cancelado": false,
-      "avion": {
-        "matricula": "sl-78954",
-        "modelo": "CARIÑOSO"
-      }
+  "silla": {
+    "posicion": "05A",
+    "columna": "A",
+    "ubicacion": "VENTANA",
+    "fila": 5,
+    "avion": {
+      "matricula": "HK20010",
+      "modelo": "Airbus A321XLR2"
     },
-    "reserva": {
-      "pasajero": {
-        "apellidos": "Garzon Hurtado",
-        "identificacion": "P006",
-        "nombres": "Carolina"
-      },
-      "cancelada": false,
-      "fechaHora": "2022-11-17T22:15:51.558426"
-    },
-    "silla": {
-      "columna": "E",
-      "posicion": "09E",
-      "ubicacion": "CENTRO",
-      "fila": 9,
-      "avion": {
-        "matricula": "HK2009",
-        "modelo": "Airbus A321XLR2"
-      },
-      "disponible": true
-    }
-  },
-  {
-    "checkIn": false,
-    "vuelo": {
-      "dateTime": "2022-10-25T22:19:25.151863",
-      "trayecto": {
-        "duration": "PT50M",
-        "costo": 200000,
-        "origen": "Pasto",
-        "destino": "Leticia"
-      },
-      "cancelado": false,
-      "avion": {
-        "matricula": "HK2009",
-        "modelo": "Airbus A321XLR2"
-      }
-    },
-    "reserva": {
-      "pasajero": {
-        "apellidos": "Mabesoy Torres",
-        "identificacion": "P001",
-        "nombres": "Ana Maria"
-      },
-      "cancelada": false,
-      "fechaHora": "2022-10-27T06:33:35.449360"
-    },
-    "silla": {
-      "columna": "A",
-      "posicion": "05A",
-      "ubicacion": "VENTANA",
-      "fila": 5,
-      "avion": {
-        "matricula": "HK2009",
-        "modelo": "Airbus A321XLR2"
-      },
-      "disponible": true
-    }
+    "disponible": true
   }
-]
+}]

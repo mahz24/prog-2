@@ -43,7 +43,7 @@ public class AvionesService {
     // "No agregado, el avion %s ya existe%n");
     if (contains(avion)) {
       throw new IOException(
-          String.format("No agregado, el avion %s ya existe%n"));
+          String.format("No agregado, el avion %s ya existe", avion.getMatricula()));
     }
     boolean ok = aviones.add(avion);
     UtilFiles.writeData(aviones, fileName);
@@ -98,6 +98,16 @@ public class AvionesService {
   public JSONObject get(String matricula) {
     Avion avionSearched = this.get(new Avion(matricula, null));
     return new JSONObject(avionSearched);
+  }
+
+  public JSONObject set(String matricula, JSONObject json) throws IOException {
+    Avion avion = new Avion(matricula, null);
+    int index = aviones.indexOf(avion);
+    avion.setMatricula(json.getString("matricula"));
+    avion.setModelo(json.getString("modelo"));
+    aviones.set(index, avion);
+    UtilFiles.writeData(aviones, fileName);
+    return new JSONObject(avion);
   }
 
   /**

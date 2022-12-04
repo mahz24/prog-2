@@ -51,6 +51,16 @@ public class VuelosController {
           return new StandardResponse(res, 404, exception);
         }
       });
+
+      put("/:vuelo", (req, res) -> {
+        try {
+          JSONObject json = new JSONObject(req.body());
+          vuelosService.set(json, req.params(":vuelo"));
+          return new StandardResponse(res, 201, "ok");
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
+        }
+      });
     });
   }
 }

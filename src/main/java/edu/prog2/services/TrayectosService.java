@@ -100,6 +100,21 @@ public class TrayectosService {
     return new JSONObject(trayectoSearched);
   }
 
+  public JSONObject set(JSONObject json, String params) throws IOException {
+    String[] parts = params.split("&");
+    Trayecto trayecto = new Trayecto(
+        parts[0], parts[1], Duration.ZERO, 0.0);
+    trayecto = get(trayecto);
+    int index = trayectos.indexOf(trayecto);
+    trayecto.setDestino(json.getString("destino"));
+    trayecto.setOrigen(json.getString("origen"));
+    trayecto.setCosto(json.getDouble("costo"));
+    trayecto.setDuration(Duration.parse(json.getString("duracion")));
+    trayectos.set(index, trayecto);
+    UtilFiles.writeData(trayectos, fileName);
+    return new JSONObject(trayecto);
+  }
+
   /**
    * Este metodo añade los datos del trayecto al archivo .csv en la carpeta data
    * 

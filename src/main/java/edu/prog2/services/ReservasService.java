@@ -103,12 +103,36 @@ public class ReservasService {
     return reservas.size();
   }
 
+  public void update() throws IOException {
+    reservas = new ArrayList<>();
+    loadCSV();
+    UtilFiles.writeJSON(reservas, fileName + ".json");
+  }
+
   public JSONObject get(String params) {
     String[] parts = params.split("&");
     LocalDateTime fechaHoraReserva = LocalDateTime.parse(parts[0]);
     Pasajero pasajeroReserva = pasajeros.get(new Pasajero(parts[1], null, null));
     Reserva reservaSearched = this.get(new Reserva(fechaHoraReserva, null, pasajeroReserva));
     return new JSONObject(reservaSearched);
+  }
+
+  public JSONObject set(JSONObject json, String params) throws IOException {
+    String[] parts = params.split("&");
+    Pasajero pasajero = pasajeros.get(new Pasajero(parts[1], null, null));
+    Reserva reserva = this.get(new Reserva(LocalDateTime.parse(parts[0]), null, pasajero));
+    int index = reservas.indexOf(reserva);
+
+    if (json.has("pasajero") && json.has("fechaHora") && json.has("cancelada")) {
+      reserva.setCancelada(json.getBoolean("cancelada"));
+      Pasajero pasajeroUpdate = pasajeros.get(new Pasajero(json.getString("pasajero"), null, null));
+      reserva.setPasajero(pasajeroUpdate);
+      reserva.setFechaHora(LocalDateTime.parse(json.getString("fechaHora")));
+    }
+
+    reservas.set(index, reserva);
+    UtilFiles.writeData(reservas, fileName);
+    return new JSONObject(reserva);
   }
 
   /**

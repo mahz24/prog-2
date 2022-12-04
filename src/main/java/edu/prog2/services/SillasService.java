@@ -103,6 +103,42 @@ public class SillasService {
     return new JSONObject(sillaSearched);
   }
 
+  public void update() throws IOException {
+    sillas = new ArrayList<>();
+    loadCSV();
+    UtilFiles.writeJSON(sillas, fileName + ".json");
+  }
+
+  public JSONObject set(JSONObject json, String params) throws IOException {
+    String[] parts = params.split("&");
+    Avion avion = aviones.get(new Avion(parts[2], null));
+    Silla silla = this.get(new Silla(Integer.parseInt(parts[0]), parts[1].charAt(0), avion));
+    int index = sillas.indexOf(silla);
+    Avion avionUpdate = aviones.get(new Avion(json.getString("avion"), null));
+    if (silla instanceof SillaEjecutiva) {
+      if (json.has("menu") && json.has("licor")) {
+        SillaEjecutiva ejecutiva = (SillaEjecutiva) silla;
+        ejecutiva.setAvion(avionUpdate);
+        ejecutiva.setColumna(json.getString("columna").charAt(0));
+        ejecutiva.setDisponible(json.getBoolean("disponible"));
+        ejecutiva.setFila(json.getInt("fila"));
+        ejecutiva.setMenu(json.getEnum(Menu.class, json.getString("menu")));
+        ejecutiva.setLicor(json.getEnum(Licor.class, json.getString("licor")));
+        sillas.set(index, ejecutiva);
+        UtilFiles.writeCSV(sillas, fileName);
+        return new JSONObject(ejecutiva);
+      }
+    }
+    silla.setAvion(avionUpdate);
+    silla.setColumna(json.getString("columna").charAt(0));
+    silla.setDisponible(json.getBoolean("disponible"));
+    silla.setFila(json.getInt("fila"));
+    sillas.set(index, silla);
+    UtilFiles.writeData(sillas, fileName);
+    return new JSONObject(silla);
+
+  }
+
   /**
    * Este metodo sube un archivo de datos de tipo csv a la carpeta data en la raiz
    * 

@@ -1,68 +1,20 @@
 [
   {
-    "duration": "PT30M",
-    "costo": 100,
-    "origen": "Manizales",
-    "destino": "Medellin"
-  },
-  {
-    "duration": "PT30M",
-    "costo": 100,
-    "origen": "Medellin",
-    "destino": "Manizales"
-  },
-  {
-    "duration": "PT40M",
-    "costo": 105.4,
+    "duration": "PT1H30M",
+    "costo": 100000,
     "origen": "Cali",
-    "destino": "Montelibano"
-  },
-  {
-    "duration": "PT40M",
-    "costo": 110.5,
-    "origen": "Montelibano",
-    "destino": "Cali"
-  },
-  {
-    "duration": "PT2H",
-    "costo": 4000,
-    "origen": "Bogota",
-    "destino": "Cancun"
-  },
-  {
-    "duration": "PT2H",
-    "costo": 4000,
-    "origen": "Cancun",
-    "destino": "Bogota"
-  },
-  {
-    "duration": "PT8H",
-    "costo": 10000,
-    "origen": "Qatar",
-    "destino": "Pereira"
-  },
-  {
-    "duration": "PT8H30M",
-    "costo": 10000,
-    "origen": "Pereira",
-    "destino": "Qatar"
-  },
-  {
-    "duration": "PT40M",
-    "costo": 200,
-    "origen": "El Bagre",
-    "destino": "Caucasia"
-  },
-  {
-    "duration": "PT50M",
-    "costo": 200000,
-    "origen": "Villavicencio",
-    "destino": "Leticia"
+    "destino": "Bucaramanga"
   },
   {
     "duration": "PT50M",
     "costo": 200000,
     "origen": "Pasto",
+    "destino": "Leticia"
+  },
+  {
+    "duration": "PT1H",
+    "costo": 100000,
+    "origen": "Cartagena",
     "destino": "Leticia"
   }
 ]

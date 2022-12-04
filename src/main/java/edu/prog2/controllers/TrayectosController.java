@@ -43,6 +43,16 @@ public class TrayectosController {
         }
       });
 
+      put("/:trayecto", (req, res) -> {
+        try {
+          JSONObject json = new JSONObject(req.body());
+          json = trayectosService.set(json, req.params("trayecto"));
+          return new StandardResponse(res, 201, "ok", json);
+        } catch (Exception e) {
+          return new StandardResponse(res, 404, e);
+        }
+      });
+
     });
 
   }

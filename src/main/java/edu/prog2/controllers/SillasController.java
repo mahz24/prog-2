@@ -38,6 +38,16 @@ public class SillasController {
           return new StandardResponse(res, 404, exception);
         }
       });
+
+      put("/:silla", (req, res) -> {
+        try {
+          JSONObject json = new JSONObject(req.body());
+          json = sillasService.set(json, req.params(":silla"));
+          return new StandardResponse(res, 201, "ok");
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
+        }
+      });
     });
   }
 }

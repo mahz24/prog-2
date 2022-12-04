@@ -45,7 +45,7 @@ public class PasajerosService {
     if (contains(pasajero)) {
       throw new IOException(
           String.format(
-              "No agregado, el pasajero %s ya existe%n",
+              "No agregado, el pasajero %s ya existe",
               pasajero.getIdentificacion()));
     }
 
@@ -101,6 +101,15 @@ public class PasajerosService {
   public JSONObject get(String id) {
     Pasajero pasajeroSearched = this.get(new Pasajero(id, null, null));
     return new JSONObject(pasajeroSearched);
+  }
+
+  public JSONObject set(String identificacion, JSONObject json) throws IOException {
+    Pasajero pasajero = new Pasajero(json);
+    pasajero.setIdentificacion(identificacion);
+    int index = pasajeros.indexOf(pasajero);
+    pasajeros.set(index, pasajero);
+    UtilFiles.writeData(pasajeros, fileName);
+    return new JSONObject(pasajero);
   }
 
   /**

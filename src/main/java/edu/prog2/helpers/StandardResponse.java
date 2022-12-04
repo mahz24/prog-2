@@ -10,7 +10,7 @@ public class StandardResponse {
 
   public StandardResponse(Response res, int status, String message) {
     res.status(status);
-    res.type("appliction/jsom");
+    res.type("application/json");
     this.json = new JSONObject()
         .put("status", status)
         .put("message", message);

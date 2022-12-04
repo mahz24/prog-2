@@ -39,7 +39,17 @@ public class AvionesController {
         } catch (Exception exception) {
           return new StandardResponse(res, 404, exception);
         }
+      });
 
+      put("/:matricula", (req, res) -> {
+        try {
+          String matricula = req.params(":matricula");
+          JSONObject json = new JSONObject(req.body());
+          json = avionesService.set(matricula, json);
+          return new StandardResponse(res, 201, "ok", json);
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
+        }
       });
     });
   }

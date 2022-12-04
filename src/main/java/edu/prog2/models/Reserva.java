@@ -104,6 +104,11 @@ public class Reserva implements IFormatCSV {
         return false;
     } else if (!fechaHora.equals(other.fechaHora))
       return false;
+    if (pasajero == null) {
+      if (other.pasajero != null)
+        return false;
+    } else if (!pasajero.equals(other.pasajero))
+      return false;
     return true;
   }
 

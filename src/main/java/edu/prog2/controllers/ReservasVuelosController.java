@@ -41,6 +41,17 @@ public class ReservasVuelosController {
         }
       });
 
+      put("/:reserva-vuelo", (request, response) -> {
+        try {
+          String params = request.params(":reserva-vuelo");
+          JSONObject jsonBody = new JSONObject(request.body());
+          JSONObject json = reservasVuelosService.set(params, jsonBody);
+          return new StandardResponse(response, 201, "ok", json);
+        } catch (Exception e) {
+          return new StandardResponse(response, 404, e);
+        }
+      });
+
     });
   }
 }

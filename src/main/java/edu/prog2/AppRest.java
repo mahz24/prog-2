@@ -2,7 +2,9 @@ package edu.prog2;
 
 import java.io.IOException;
 import edu.prog2.controllers.*;
+import edu.prog2.helpers.StandardResponse;
 import edu.prog2.services.*;
+import static spark.Spark.*;
 
 public class AppRest {
   public static void main(String[] args) throws IOException {
@@ -27,5 +29,27 @@ public class AppRest {
     ReservasVuelosService reservasVuelosService = new ReservasVuelosService(reservasService, vuelosService,
         sillasService, avionesService, pasajerosService, trayectosService);
     new ReservasVuelosController(reservasVuelosService);
+
+    after("/*/:param", (req, res) -> {
+
+      if (req.requestMethod().equals("PUT")) {
+        String[] path = req.pathInfo().split("/");
+        try {
+          if (path[1].equals("pasajeros")) {
+            reservasService.update();
+          } else if (path[1].equals("aviones")) {
+            sillasService.update();
+            vuelosService.update();
+          } else if (path[1].equals("pasajeros")) {
+            vuelosService.update();
+          }
+          reservasVuelosService.update();
+
+        } catch (Exception e) {
+          new StandardResponse(res, 404, e);
+        }
+      }
+    });
+
   }
 }

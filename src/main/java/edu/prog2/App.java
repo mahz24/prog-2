@@ -553,6 +553,7 @@ public class App {
       Licor licor = Keyboard.readEnum(Licor.class);
       ejecutiva.setMenu(menu);
       ejecutiva.setLicor(licor);
+      return ejecutiva;
     }
     return s;
   }

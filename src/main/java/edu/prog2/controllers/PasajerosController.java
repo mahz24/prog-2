@@ -43,6 +43,17 @@ public class PasajerosController {
         }
       });
 
+      put("/:identificacion", (req, res) -> {
+        try {
+          String identificacion = req.params(":identificacion");
+          JSONObject json = new JSONObject(req.body());
+          json = pasajerosService.set(identificacion, json);
+          return new StandardResponse(res, 201, "ok", json);
+        } catch (Exception exception) {
+          return new StandardResponse(res, 404, exception);
+        }
+      });
+
     });
 
   }

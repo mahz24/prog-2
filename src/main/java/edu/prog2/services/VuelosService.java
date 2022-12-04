@@ -104,14 +104,6 @@ public class VuelosService {
     return this.vuelos.contains(vuelo);
   }
 
-  public AvionesService getAviones() {
-    return aviones;
-  }
-
-  public TrayectosService getTrayectos() {
-    return trayectos;
-  }
-
   /**
    * Este metodo muestra el tamaño del arraylist
    * 
@@ -119,6 +111,28 @@ public class VuelosService {
    */
   public int size() {
     return vuelos.size();
+  }
+
+  public JSONObject set(JSONObject json, String params) throws IOException {
+    String[] parts = params.split("&");
+    Trayecto trayecto = trayectos.get(new Trayecto(parts[1], parts[2], null, 0));
+    Avion avion = aviones.get(new Avion(parts[3], null));
+    Vuelo vuelo = this.get(new Vuelo(LocalDateTime.parse(parts[0]), trayecto, avion));
+    int index = vuelos.indexOf(vuelo);
+
+    if (json.has("origen") && json.has("destino") && json.has("avion")) {
+      Trayecto trayectoUpdate = trayectos
+          .get(new Trayecto(json.getString("origen"), json.getString("destino"), null, 0));
+      Avion avionUpdate = aviones.get(new Avion(json.getString("avion"), null));
+      vuelo.setAvion(avionUpdate);
+      vuelo.setCancelado(json.getBoolean("cancelado"));
+      vuelo.setTrayecto(trayectoUpdate);
+      vuelo.setDateTime(LocalDateTime.parse(json.getString("fechaHora")));
+    }
+
+    vuelos.set(index, vuelo);
+    UtilFiles.writeData(vuelos, fileName);
+    return new JSONObject(vuelo);
   }
 
   public JSONObject getVuelo(String params) {
@@ -142,6 +156,12 @@ public class VuelosService {
 
     LocalDateTime fechaHora = LocalDateTime.parse(json.getString("fechaHora"));
     return getJSON(new Vuelo(fechaHora, trayecto, avion));
+  }
+
+  public void update() throws IOException {
+    vuelos = new ArrayList<>();
+    loadCSV();
+    UtilFiles.writeJSON(vuelos, fileName + ".json");
   }
 
   /**

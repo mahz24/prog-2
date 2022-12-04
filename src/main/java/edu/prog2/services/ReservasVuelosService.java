@@ -141,14 +141,52 @@ public class ReservasVuelosService {
   }
 
   public JSONObject get(String params) {
-    String[] pars = params.split("&");
-    Pasajero pasajero = this.pasajeros.get(new Pasajero(pars[1], null, null));
-    Reserva reserva = this.reservas.get(new Reserva(LocalDateTime.parse(pars[0]), null, pasajero));
-    Avion avion = this.aviones.get(new Avion(pars[5], null));
-    Trayecto trayecto = this.trayectos.get(new Trayecto(pars[3], pars[4], Duration.ZERO, 0));
-    Silla silla = this.sillas.get(new Silla(Integer.parseInt(pars[6]), pars[7].charAt(0), avion));
-    Vuelo vuelo = this.vuelos.get(new Vuelo(LocalDateTime.parse(pars[2]), trayecto, avion));
+    String[] parts = params.split("&");
+    Pasajero pasajero = this.pasajeros.get(new Pasajero(parts[1], null, null));
+    Reserva reserva = this.reservas.get(new Reserva(LocalDateTime.parse(parts[0]), null, pasajero));
+    Avion avion = this.aviones.get(new Avion(parts[5], null));
+    Trayecto trayecto = this.trayectos.get(new Trayecto(parts[3], parts[4], Duration.ZERO, 0));
+    Silla silla = this.sillas.get(new Silla(Integer.parseInt(parts[6]), parts[7].charAt(0), avion));
+    Vuelo vuelo = this.vuelos.get(new Vuelo(LocalDateTime.parse(parts[2]), trayecto, avion));
     ReservaVuelo reservaVueloSearched = this.get(new ReservaVuelo(reserva, vuelo, silla));
+    return new JSONObject(reservaVueloSearched);
+  }
+
+  public void update() throws IOException {
+    reservasVuelos = new ArrayList<>();
+    loadCSV();
+    UtilFiles.writeJSON(reservasVuelos, fileName + ".json");
+  }
+
+  public JSONObject set(String params, JSONObject json) throws IOException {
+    String[] parts = params.split("&");
+    // encontrar los datos de la reserva en vuelo
+    Pasajero pasajero = this.pasajeros.get(new Pasajero(parts[1], null, null));
+    Reserva reserva = this.reservas.get(new Reserva(LocalDateTime.parse(parts[0]), null, pasajero));
+    Avion avion = this.aviones.get(new Avion(parts[5], null));
+    Trayecto trayecto = this.trayectos.get(new Trayecto(parts[3], parts[4],
+        Duration.ZERO, 0));
+    Silla silla = this.sillas.get(new Silla(Integer.parseInt(parts[6]),
+        parts[7].charAt(0), avion));
+    Vuelo vuelo = this.vuelos.get(new Vuelo(LocalDateTime.parse(parts[2]),
+        trayecto, avion));
+    ReservaVuelo reservaVueloSearched = this.get(new ReservaVuelo(reserva, vuelo,
+        silla));
+    int index = reservasVuelos.indexOf(reservaVueloSearched);
+
+    // actualizar los datos de la reserva en vuelo
+    if (json.has("fechaHoraVuelo") && json.has("destino") && json.has("origen") && json.has("avion")) {
+      Trayecto trayectoVuelo = trayectos
+          .get(new Trayecto(json.getString("origen"), json.getString("destino"), Duration.ZERO, 0));
+      Avion avionVuelo = aviones.get(new Avion(json.getString("avion"), null));
+      Vuelo vueloUpdate = vuelos
+          .get(new Vuelo(LocalDateTime.parse(json.getString("fechaHoraVuelo")), trayectoVuelo, avionVuelo));
+      Silla sillaUpdate = sillas
+          .get(new Silla(json.getInt("fila"), json.getString("columna").charAt(0), avionVuelo));
+      reservaVueloSearched = new ReservaVuelo(reserva, vueloUpdate, sillaUpdate);
+    }
+    reservasVuelos.set(index, reservaVueloSearched);
+    UtilFiles.writeData(reservasVuelos, fileName);
     return new JSONObject(reservaVueloSearched);
   }
 

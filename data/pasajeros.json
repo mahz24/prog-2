@@ -8,5 +8,25 @@
     "apellidos": "Centenar",
     "identificacion": "P002",
     "nombres": "Camila"
+  },
+  {
+    "apellidos": "Zapata",
+    "identificacion": "P001",
+    "nombres": "Daniel"
+  },
+  {
+    "apellidos": "Campo",
+    "identificacion": "P003",
+    "nombres": "Jhorman"
+  },
+  {
+    "apellidos": "Morelo",
+    "identificacion": "P004",
+    "nombres": "Dennis"
+  },
+  {
+    "apellidos": "Morales",
+    "identificacion": "P005",
+    "nombres": "Maria"
   }
 ]

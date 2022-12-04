@@ -2,25 +2,25 @@
   "checkIn": false,
   "reserva": {
     "pasajero": {
-      "apellidos": "Centenar",
-      "identificacion": "P002",
-      "nombres": "Camila"
+      "apellidos": "Campo",
+      "identificacion": "P003",
+      "nombres": "Jhorman"
     },
     "cancelada": false,
-    "fechaHora": "2022-10-28T06:33"
+    "fechaHora": "2022-12-28T06:33:35.449360"
   },
   "vuelo": {
-    "dateTime": "2022-10-25T22:19:25.151863",
+    "dateTime": "2022-11-16T11:42:42.740790",
     "trayecto": {
-      "duration": "PT1H30M",
+      "duration": "PT1H",
       "costo": 100000,
-      "origen": "Cali",
-      "destino": "Bucaramanga"
+      "origen": "Cartagena",
+      "destino": "Leticia"
     },
     "cancelado": false,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     }
   },
   "silla": {
@@ -29,8 +29,8 @@
     "ubicacion": "VENTANA",
     "fila": 5,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   }

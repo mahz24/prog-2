@@ -6,5 +6,17 @@
   {
     "matricula": "HK20010",
     "modelo": "Airbus A321XLR2"
+  },
+  {
+    "matricula": "HK2001",
+    "modelo": "Airbus A321XLR"
+  },
+  {
+    "matricula": "HK2006",
+    "modelo": " A321XLR"
+  },
+  {
+    "matricula": "HK2007",
+    "modelo": " A321XLR-Ultra"
   }
 ]

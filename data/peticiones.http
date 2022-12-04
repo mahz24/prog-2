@@ -14,9 +14,9 @@ POST {{baseURL}}/pasajeros
 Content-Type: application/json
  
 {
-    "identificacion" : "P003",
-    "nombres": "marco",
-    "apellidos" : "zuñiga"
+    "identificacion" : "P005",
+    "nombres": "Maria",
+    "apellidos" : "Morales"
 }
 
 ### Actualizar la  de un pasajero
@@ -51,10 +51,10 @@ POST {{baseURL}}/trayectos
 Content-Type: application/json
 
 {
-  "origen": "Cancun",
-  "destino": "Bogota",
-  "costo": 100000,
-  "duration": "PT60M"
+  "origen": "Leticia",
+  "destino": "Cartagena",
+  "costo": 50000,
+  "duration": "PT40M"
 }
 
 ### Actualizar la información de un trayecto
@@ -80,7 +80,7 @@ GET {{baseURL}}/aviones
 content-type: application/json
 
 ### Obtener la información avión en especifico
-GET {{baseURL}}/aviones/hk2003
+GET {{baseURL}}/aviones/HK2005
 content-type: application/json
 
 ### Registrar los datos de un avión
@@ -88,8 +88,8 @@ POST {{baseURL}}/aviones
 content-type: application/json
 
 { 
-  "matricula": "HK2001", 
-  "modelo": "Airbus A321XLR"
+  "matricula": "HK2007", 
+  "modelo": " A321XLR-Ultra"
 }
 
 ### Actualizar la información de un avión
@@ -97,12 +97,12 @@ PUT {{baseURL}}/aviones/hk2003
 content-type: application/json
 
 { 
-  "matricula": "HK2005", 
+  "matricula": "HK200", 
   "modelo": "Airbus Airbus 330-1"
 }
 
 ### Eliminaar el registro de un avión
-DELETE {{baseURL}}/aviones/HK2001
+DELETE {{baseURL}}/aviones/HK2007
 Content-Type: application/json
 
 
@@ -121,7 +121,7 @@ POST {{baseURL}}/sillas
 Content-Type: application/json
 
 { 
-  "avion": "HK20010", 
+  "avion": "HK2007", 
   "ejecutivas": 12, 
   "economicas": 30
 }
@@ -162,7 +162,7 @@ Content-Type: application/json
     "fechaHora": "2022-11-16T11:42:42.74079",
     "origen": "Cartagena",
     "destino": "Leticia",
-    "avion": "HK20010"
+    "avion": "HK2007"
 }
 
 ### Actualizar la información de un vuelo
@@ -196,8 +196,8 @@ POST {{baseURL}}/reservas
 Content-Type: application/json
 
 {
-    "fechaHora": "2022-11-28T06:33:35.449360",
-    "pasajero": "P0022"
+    "fechaHora": "2022-12-28T06:33:35.449360",
+    "pasajero": "P003"
 }
 
 ### Actualizar la información de una reserva
@@ -230,12 +230,12 @@ POST {{baseURL}}/vuelos-reservas
 Content-Type: application/json
 
 {
-    "fechaHoraReserva": "2022-10-28T06:33",
-    "pasajero": "P002",
-    "fechaHoraVuelo": "2022-10-25T22:19:25.151863",
-    "origen": "Cali",
-    "destino": "Bucaramanga",
-    "avion": "HK20010",
+    "fechaHoraReserva": "2022-12-28T06:33:35.449360",
+    "pasajero": "P003",
+    "fechaHoraVuelo": "2022-11-16T11:42:42.740790",
+    "origen": "Cartagena",
+    "destino": "Leticia",
+    "avion": "HK2007",
     "fila": 5,
     "columna": "A"
 }

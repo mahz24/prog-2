@@ -1,9 +1,29 @@
-[{
-  "pasajero": {
-    "apellidos": "Centenar",
-    "identificacion": "P002",
-    "nombres": "Camila"
+[
+  {
+    "pasajero": {
+      "apellidos": "Morales",
+      "identificacion": "P005",
+      "nombres": "Maria"
+    },
+    "cancelada": false,
+    "fechaHora": "2022-12-28T06:33:35.449360"
   },
-  "cancelada": false,
-  "fechaHora": "2022-10-28T06:33"
-}]
+  {
+    "pasajero": {
+      "apellidos": "Morelo",
+      "identificacion": "P004",
+      "nombres": "Dennis"
+    },
+    "cancelada": false,
+    "fechaHora": "2022-12-28T06:33:35.449360"
+  },
+  {
+    "pasajero": {
+      "apellidos": "Campo",
+      "identificacion": "P003",
+      "nombres": "Jhorman"
+    },
+    "cancelada": false,
+    "fechaHora": "2022-12-28T06:33:35.449360"
+  }
+]

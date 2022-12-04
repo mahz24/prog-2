@@ -1,1157 +1,487 @@
 [
   {
+    "columna": "A",
     "posicion": "01A",
-    "columna": "A",
     "ubicacion": "VENTANA",
     "fila": 1,
     "licor": "NINGUNO",
-    "menu": "VEGETARIANO",
+    "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "B",
     "posicion": "01B",
-    "columna": "B",
     "ubicacion": "PASILLO",
     "fila": 1,
     "licor": "NINGUNO",
     "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "C",
     "posicion": "01C",
-    "columna": "C",
     "ubicacion": "PASILLO",
     "fila": 1,
     "licor": "NINGUNO",
     "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "D",
     "posicion": "01D",
-    "columna": "D",
     "ubicacion": "VENTANA",
     "fila": 1,
     "licor": "NINGUNO",
     "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "A",
     "posicion": "02A",
-    "columna": "A",
     "ubicacion": "VENTANA",
     "fila": 2,
     "licor": "NINGUNO",
     "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "B",
     "posicion": "02B",
-    "columna": "B",
     "ubicacion": "PASILLO",
     "fila": 2,
     "licor": "NINGUNO",
     "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "C",
     "posicion": "02C",
-    "columna": "C",
     "ubicacion": "PASILLO",
     "fila": 2,
     "licor": "NINGUNO",
     "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "D",
     "posicion": "02D",
-    "columna": "D",
     "ubicacion": "VENTANA",
     "fila": 2,
     "licor": "NINGUNO",
     "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "A",
     "posicion": "03A",
-    "columna": "A",
     "ubicacion": "VENTANA",
     "fila": 3,
     "licor": "NINGUNO",
     "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "B",
     "posicion": "03B",
-    "columna": "B",
     "ubicacion": "PASILLO",
     "fila": 3,
     "licor": "NINGUNO",
     "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "C",
     "posicion": "03C",
-    "columna": "C",
     "ubicacion": "PASILLO",
     "fila": 3,
     "licor": "NINGUNO",
     "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "D",
     "posicion": "03D",
-    "columna": "D",
     "ubicacion": "VENTANA",
     "fila": 3,
     "licor": "NINGUNO",
     "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "A",
     "posicion": "04A",
-    "columna": "A",
     "ubicacion": "VENTANA",
     "fila": 4,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "B",
     "posicion": "04B",
-    "columna": "B",
-    "ubicacion": "PASILLO",
+    "ubicacion": "CENTRO",
     "fila": 4,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "C",
     "posicion": "04C",
-    "columna": "C",
     "ubicacion": "PASILLO",
     "fila": 4,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
     "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "D",
     "posicion": "04D",
-    "columna": "D",
-    "ubicacion": "VENTANA",
-    "fila": 4,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "05A",
-    "columna": "A",
-    "ubicacion": "VENTANA",
-    "fila": 5,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "05B",
-    "columna": "B",
-    "ubicacion": "CENTRO",
-    "fila": 5,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "05C",
-    "columna": "C",
-    "ubicacion": "PASILLO",
-    "fila": 5,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "05D",
-    "columna": "D",
-    "ubicacion": "PASILLO",
-    "fila": 5,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "05E",
-    "columna": "E",
-    "ubicacion": "CENTRO",
-    "fila": 5,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "05F",
-    "columna": "F",
-    "ubicacion": "VENTANA",
-    "fila": 5,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "06A",
-    "columna": "A",
-    "ubicacion": "VENTANA",
-    "fila": 6,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "06B",
-    "columna": "B",
-    "ubicacion": "CENTRO",
-    "fila": 6,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "06C",
-    "columna": "C",
-    "ubicacion": "PASILLO",
-    "fila": 6,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "06D",
-    "columna": "D",
-    "ubicacion": "PASILLO",
-    "fila": 6,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "06E",
-    "columna": "E",
-    "ubicacion": "CENTRO",
-    "fila": 6,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "06F",
-    "columna": "F",
-    "ubicacion": "VENTANA",
-    "fila": 6,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "07A",
-    "columna": "A",
-    "ubicacion": "VENTANA",
-    "fila": 7,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "07B",
-    "columna": "B",
-    "ubicacion": "CENTRO",
-    "fila": 7,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "07C",
-    "columna": "C",
-    "ubicacion": "PASILLO",
-    "fila": 7,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "07D",
-    "columna": "D",
-    "ubicacion": "PASILLO",
-    "fila": 7,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "07E",
-    "columna": "E",
-    "ubicacion": "CENTRO",
-    "fila": 7,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "07F",
-    "columna": "F",
-    "ubicacion": "VENTANA",
-    "fila": 7,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "08A",
-    "columna": "A",
-    "ubicacion": "VENTANA",
-    "fila": 8,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "08B",
-    "columna": "B",
-    "ubicacion": "CENTRO",
-    "fila": 8,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "08C",
-    "columna": "C",
-    "ubicacion": "PASILLO",
-    "fila": 8,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "08D",
-    "columna": "D",
-    "ubicacion": "PASILLO",
-    "fila": 8,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "08E",
-    "columna": "E",
-    "ubicacion": "CENTRO",
-    "fila": 8,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "08F",
-    "columna": "F",
-    "ubicacion": "VENTANA",
-    "fila": 8,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "09A",
-    "columna": "A",
-    "ubicacion": "VENTANA",
-    "fila": 9,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "09B",
-    "columna": "B",
-    "ubicacion": "CENTRO",
-    "fila": 9,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "09C",
-    "columna": "C",
-    "ubicacion": "PASILLO",
-    "fila": 9,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "09D",
-    "columna": "D",
-    "ubicacion": "PASILLO",
-    "fila": 9,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "09E",
-    "columna": "E",
-    "ubicacion": "CENTRO",
-    "fila": 9,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "09F",
-    "columna": "F",
-    "ubicacion": "VENTANA",
-    "fila": 9,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "10A",
-    "columna": "A",
-    "ubicacion": "VENTANA",
-    "fila": 10,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "10B",
-    "columna": "B",
-    "ubicacion": "CENTRO",
-    "fila": 10,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "10C",
-    "columna": "C",
-    "ubicacion": "PASILLO",
-    "fila": 10,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "10D",
-    "columna": "D",
-    "ubicacion": "PASILLO",
-    "fila": 10,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "10E",
-    "columna": "E",
-    "ubicacion": "CENTRO",
-    "fila": 10,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "10F",
-    "columna": "F",
-    "ubicacion": "VENTANA",
-    "fila": 10,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "11A",
-    "columna": "A",
-    "ubicacion": "VENTANA",
-    "fila": 11,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "11B",
-    "columna": "B",
-    "ubicacion": "CENTRO",
-    "fila": 11,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "11C",
-    "columna": "C",
-    "ubicacion": "PASILLO",
-    "fila": 11,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "11D",
-    "columna": "D",
-    "ubicacion": "PASILLO",
-    "fila": 11,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "11E",
-    "columna": "E",
-    "ubicacion": "CENTRO",
-    "fila": 11,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "11F",
-    "columna": "F",
-    "ubicacion": "VENTANA",
-    "fila": 11,
-    "avion": {
-      "matricula": "HK2005",
-      "modelo": "Airbus Airbus 330-1"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "01A",
-    "columna": "A",
-    "ubicacion": "VENTANA",
-    "fila": 1,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "01B",
-    "columna": "B",
-    "ubicacion": "PASILLO",
-    "fila": 1,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "01C",
-    "columna": "C",
-    "ubicacion": "PASILLO",
-    "fila": 1,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "01D",
-    "columna": "D",
-    "ubicacion": "VENTANA",
-    "fila": 1,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "02A",
-    "columna": "A",
-    "ubicacion": "VENTANA",
-    "fila": 2,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "02B",
-    "columna": "B",
-    "ubicacion": "PASILLO",
-    "fila": 2,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "02C",
-    "columna": "C",
-    "ubicacion": "PASILLO",
-    "fila": 2,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "02D",
-    "columna": "D",
-    "ubicacion": "VENTANA",
-    "fila": 2,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "03A",
-    "columna": "A",
-    "ubicacion": "VENTANA",
-    "fila": 3,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "03B",
-    "columna": "B",
-    "ubicacion": "PASILLO",
-    "fila": 3,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "03C",
-    "columna": "C",
-    "ubicacion": "PASILLO",
-    "fila": 3,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "03D",
-    "columna": "D",
-    "ubicacion": "VENTANA",
-    "fila": 3,
-    "licor": "NINGUNO",
-    "menu": "INDEFINIDO",
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "04A",
-    "columna": "A",
-    "ubicacion": "VENTANA",
-    "fila": 4,
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "04B",
-    "columna": "B",
-    "ubicacion": "CENTRO",
-    "fila": 4,
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
-    "posicion": "04C",
-    "columna": "C",
     "ubicacion": "PASILLO",
     "fila": 4,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
-    "posicion": "04D",
-    "columna": "D",
-    "ubicacion": "PASILLO",
-    "fila": 4,
-    "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
-    },
-    "disponible": true
-  },
-  {
+    "columna": "E",
     "posicion": "04E",
-    "columna": "E",
     "ubicacion": "CENTRO",
     "fila": 4,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "F",
     "posicion": "04F",
-    "columna": "F",
     "ubicacion": "VENTANA",
     "fila": 4,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "A",
     "posicion": "05A",
-    "columna": "A",
     "ubicacion": "VENTANA",
     "fila": 5,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "B",
     "posicion": "05B",
-    "columna": "B",
     "ubicacion": "CENTRO",
     "fila": 5,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "C",
     "posicion": "05C",
-    "columna": "C",
     "ubicacion": "PASILLO",
     "fila": 5,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "D",
     "posicion": "05D",
-    "columna": "D",
     "ubicacion": "PASILLO",
     "fila": 5,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "E",
     "posicion": "05E",
-    "columna": "E",
     "ubicacion": "CENTRO",
     "fila": 5,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "F",
     "posicion": "05F",
-    "columna": "F",
     "ubicacion": "VENTANA",
     "fila": 5,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "A",
     "posicion": "06A",
-    "columna": "A",
     "ubicacion": "VENTANA",
     "fila": 6,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "B",
     "posicion": "06B",
-    "columna": "B",
     "ubicacion": "CENTRO",
     "fila": 6,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "C",
     "posicion": "06C",
-    "columna": "C",
     "ubicacion": "PASILLO",
     "fila": 6,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "D",
     "posicion": "06D",
-    "columna": "D",
     "ubicacion": "PASILLO",
     "fila": 6,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "E",
     "posicion": "06E",
-    "columna": "E",
     "ubicacion": "CENTRO",
     "fila": 6,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "F",
     "posicion": "06F",
-    "columna": "F",
     "ubicacion": "VENTANA",
     "fila": 6,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "A",
     "posicion": "07A",
-    "columna": "A",
     "ubicacion": "VENTANA",
     "fila": 7,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "B",
     "posicion": "07B",
-    "columna": "B",
     "ubicacion": "CENTRO",
     "fila": 7,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "C",
     "posicion": "07C",
-    "columna": "C",
     "ubicacion": "PASILLO",
     "fila": 7,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "D",
     "posicion": "07D",
-    "columna": "D",
     "ubicacion": "PASILLO",
     "fila": 7,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "E",
     "posicion": "07E",
-    "columna": "E",
     "ubicacion": "CENTRO",
     "fila": 7,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
+    "columna": "F",
     "posicion": "07F",
-    "columna": "F",
     "ubicacion": "VENTANA",
     "fila": 7,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
-    "posicion": "08A",
     "columna": "A",
+    "posicion": "08A",
     "ubicacion": "VENTANA",
     "fila": 8,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
-    "posicion": "08B",
     "columna": "B",
+    "posicion": "08B",
     "ubicacion": "CENTRO",
     "fila": 8,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
-    "posicion": "08C",
     "columna": "C",
+    "posicion": "08C",
     "ubicacion": "PASILLO",
     "fila": 8,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
-    "posicion": "08D",
     "columna": "D",
+    "posicion": "08D",
     "ubicacion": "PASILLO",
     "fila": 8,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
-    "posicion": "08E",
     "columna": "E",
+    "posicion": "08E",
     "ubicacion": "CENTRO",
     "fila": 8,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   },
   {
-    "posicion": "08F",
     "columna": "F",
+    "posicion": "08F",
     "ubicacion": "VENTANA",
     "fila": 8,
     "avion": {
-      "matricula": "HK20010",
-      "modelo": "Airbus A321XLR2"
+      "matricula": "HK2007",
+      "modelo": " A321XLR-Ultra"
     },
     "disponible": true
   }

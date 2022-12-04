@@ -1,3 +1,7 @@
 Cali;Bucaramanga;PT1H30M;100000.0
 Cartagena;Leticia;PT1H;100000.0
 Sienaga de Oro;Santa Marta;PT1H;100000.0
+Medellin;Manizales;PT1H;100000.0
+Manizales;Medellin;PT1H;100000.0
+Bucaramanga;Cali;PT40M;50000.0
+Leticia;Cartagena;PT40M;50000.0

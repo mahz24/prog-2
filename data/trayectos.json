@@ -16,5 +16,29 @@
     "costo": 100000,
     "origen": "Sienaga de Oro",
     "destino": "Santa Marta"
+  },
+  {
+    "duration": "PT1H",
+    "costo": 100000,
+    "origen": "Medellin",
+    "destino": "Manizales"
+  },
+  {
+    "duration": "PT1H",
+    "costo": 100000,
+    "origen": "Manizales",
+    "destino": "Medellin"
+  },
+  {
+    "duration": "PT40M",
+    "costo": 50000,
+    "origen": "Bucaramanga",
+    "destino": "Cali"
+  },
+  {
+    "duration": "PT40M",
+    "costo": 50000,
+    "origen": "Leticia",
+    "destino": "Cartagena"
   }
 ]
